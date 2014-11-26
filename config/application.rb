@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module PrancingPony
   class Application < Rails::Application
+      config.filepicker_rails.api_key = "A3l8fJlVdRSKp7x6lTxzPz"
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -21,3 +22,5 @@ module PrancingPony
     # config.i18n.default_locale = :de
   end
 end
+
+
