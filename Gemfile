@@ -35,7 +35,7 @@ gem 'ejs'
 gem 'filepicker-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
-
+gem 'newrelic_rpm'
 group :development do
     gem 'annotate'
     gem 'better_errors'
