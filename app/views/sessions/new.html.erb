@@ -1,56 +1,60 @@
 <div id="root-background">
 </div>
 
-<div id='welcome-page' class="col-xs-8 col-xs-offset-2">
-    <h2>Welcome to the Prancing Pony!<h2>
-    <h4>Log in to browse our goodies</h4> 
-</div> 
-<div class='users_form' class="col-xs-6 col-xs-offset-3">
-<form action="<%= users_url %>"
-      method="POST"
-      style="margin:0 auto; width: 17%;">
-      
-          <input type="hidden"
-                 name="authenticity_token"
-                 value="<%= form_authenticity_token %>">
-      
-      <div class="form-group">
-      <input type="text"
-             name="user[username]"
-             class="form-control"
-             placeholder="Username">
-      </div>
-      <div class="form-group">
-          <input type="password"
-                 name="user[password]"
+<div class="row">
+    <div id='welcome-page' class="col-xs-8 col-xs-offset-2">
+        <h2>Welcome to the Prancing Pony!<h2>
+        <h4>Log in to browse our goodies</h4> 
+    </div> 
+</div>
+
+<div class="row">
+    <div class='users_form' class="col-xs-6 col-xs-offset-3">
+    <form action="<%= users_url %>"
+          method="POST"
+          style="margin:0 auto; width: 17%;">
+          
+              <input type="hidden"
+                     name="authenticity_token"
+                     value="<%= form_authenticity_token %>">
+          
+          <div class="form-group">
+          <input type="text"
+                 name="user[username]"
                  class="form-control"
-                 placeholder="Password">
-      </div>
-        
-      <input type="submit" 
-             value="Sign In" 
-             class="btn btn-info"
-             style="width: 100%; margin-bottom: 5px;">
-</form>
+                 placeholder="Username">
+          </div>
+          <div class="form-group">
+              <input type="password"
+                     name="user[password]"
+                     class="form-control"
+                     placeholder="Password">
+          </div>
+            
+          <input type="submit" 
+                 value="Sign In" 
+                 class="btn btn-info"
+                 style="width: 100%; margin-bottom: 5px;">
+    </form>
 
-<!-- Guest log in -->
-<form action="<%= users_url %>"
-    method="POST"
-    style="margin: 0 auto; width: 17%;">
-    <input type="hidden"
-           name="authenticity_token"
-           value="<%= form_authenticity_token %>">
-      <input type="hidden"
-             name="user[username]"
-             value="Arwen">
-      <input type="hidden"
-             name="user[password]"
-             value="password">
+    <!-- Guest log in -->
+    <form action="<%= users_url %>"
+        method="POST"
+        style="margin: 0 auto; width: 17%;">
+        <input type="hidden"
+               name="authenticity_token"
+               value="<%= form_authenticity_token %>">
+          <input type="hidden"
+                 name="user[username]"
+                 value="Arwen">
+          <input type="hidden"
+                 name="user[password]"
+                 value="password">
 
-      <input type="submit", 
-             value="Sign In As Guest" 
-             class="btn btn-info"
-             style="width: 100%; margin-bottom: 5px;">
-</form>
-
+          <input type="submit", 
+                 value="Sign In As Guest" 
+                 class="btn btn-info"
+                 style="width: 100%; margin-bottom: 5px;">
+    </form>
+    </div>
 </div>
