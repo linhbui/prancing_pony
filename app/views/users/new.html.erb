@@ -1,15 +1,15 @@
 <div id="root-background">
 </div>
 <div class='users_form' class="col-xs-6 col-xs-offset-3">
-<h1 style="color: white;">Sign Up</h1>
+<h1 style="color: white; margin-bottom: 20px">Join Our Merchants</h1>
 <form action="<%= users_url %>"
       method="POST"
-      style="margin:0 auto; width: 20%;">
+      style="margin:0 auto; width: 17%;">
+
       
       <input type="hidden"
              name="authenticity_token"
              value="<%= form_authenticity_token %>">
-      
       <div class="form-group">
       <input type="text"
              name="user[username]"
@@ -21,14 +21,22 @@
                  name="user[password]"
                  class="form-control"
                  placeholder="Password">
-      </div>
-        
+     </div>
+     <div class="form-group"> 
+      <input 
+        type="filepicker"
+        data-fp-mimetypes="image/*"
+        data-fp-container="modal"
+        data-fp-apikey="A3l8fJlVdRSKp7x6lTxzPz"
+        class="form-control btn btn-info"
+        data-fp-button-text="Upload Your Avatar"
+        name="user[filepicker_url]"
+        id="filepickerButton"> 
+    </div> 
       <input type="submit" 
              value="Sign Up" 
              class="btn btn-info"
-             style="width: 70%; margin-bottom: 5px; margin-left: 15%">
-</form>
-
-
+             style="width: 100%; margin-bottom: 5px;">
+ </form>
 
 </div>

@@ -13,4 +13,9 @@ class UsersController < ApplicationController
       render :new  
     end
   end
+
+  private
+  def user_params
+      params.require(:user).permit(:username, :password, :filepicker_url)
+  end
 end
