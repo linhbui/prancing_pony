@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prancing Pony</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= filepicker_js_include_tag %>
+</head>
+<body>
+    <%= render "layouts/nav" %>
+
+    <% if flash[:errors] %>
+        <ul>
+            <% flash[:errors].each do |error| %>
+                <li><%= error %></li>
+            <% end %>
+        </ul>
+
+    <% end %>
+    
+<div class="container">
+    <%= yield %>
+</div>
+
+
+</body>
+</html>

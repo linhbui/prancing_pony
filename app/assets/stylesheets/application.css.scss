@@ -1,0 +1,64 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#root-background {
+    background-image: url("/assets/inn.jpg");
+    background-size: cover;
+    
+    background-position: 50% 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
+.navbar-brand img {
+    height: 50px;
+    position: fixed;
+    display: inline-block;
+    left: 5px;
+    top: 0px;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+#welcome-page {
+    padding-top: 6%;
+    margin-bottom: 17px;
+    color: white;
+    text-align: center;
+}
+
+#welcome-page h1 h2 h3 h4 h5 {
+   
+}
+
+.users_form .btn .btn-info {
+    width: 70%;
+    margin-bottom: 5px;
+    margin-left: 15%;
+}

@@ -1,0 +1,65 @@
+<nav class="navbar navbar-default" role="navigation"  style="
+    background-color: aliceblue;">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href=""><img src="/assets/logo.jpg"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Browse <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Jewelry</a></li>
+            <li><a href="#">Cosmetics</a></li>
+            <li><a href="#">Flowers</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Cars</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Misc</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="try searching for rings :)">
+        </div>
+        <button type="submit" class="btn btn-default">Search</button>
+      </form>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      <ul class="nav navbar-nav navbar-right">
+		  <li><a href="http://linhbui.me">About Linh Bui</a></li>
+		  <li><a href="https://github.com/linhbui/prancing_pony">Github</a></li>
+        <% if logged_in? %>
+            <li>
+                <form action="/session"
+                      method="POST"
+                      >
+                    <input type="hidden"
+                           name="authenticity_token"
+                           value="<%= form_authenticity_token %>">
+                    <input type="hidden"
+                           name="_method"
+                           value="DELETE">
+                    <input type="submit", value="Sign Out" id="sign-out-button">
+                </form>
+            </li>
+            <li><a href="">Home</a></li>
+            <li><a href="#">Favorites</a></li>
+        <% else %>
+            <li><a href="/users/new">Sign Up</a></li>
+        <% end %>
+        <li><a href="#">Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></li>             
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
