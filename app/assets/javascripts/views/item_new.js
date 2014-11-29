@@ -3,7 +3,7 @@ PrancingPony.Views.ItemNew = Backbone.View.extend({
     template: JST['items/new'],
 
     events: {
-        'click item-submit': 'submit'
+        'click #item-submit': 'submit'
     },
 
 
@@ -18,16 +18,18 @@ PrancingPony.Views.ItemNew = Backbone.View.extend({
     },
 
     submit: function(event) {
-        debugger
         event.preventDefault();
-        var attrs = this.$el.serializeJSON();
+        var attrs = this.$el.find("form").serializeJSON();
         function success () {
             Backbone.history.navigate("", { trigger: true });
         };
         this.model.set(attrs);
          if (this.model.isNew()) {
              this.collection.create(this.model, {
-                 success: success
+                 success: success,
+                 error: function() {
+                     console.log("sadly this doesn't work >_<")
+                 }
              });
          } else {
              this.model.save({}, {

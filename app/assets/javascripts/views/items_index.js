@@ -24,10 +24,10 @@ PrancingPony.Views.ItemsIndex = Backbone.CompositeView.extend({
     },
     
     addView: function(model){
-        var itemPieceView = new PrancingPony.Views.ItemPiece({
+        var itemElementView = new PrancingPony.Views.ItemElement({
             model: model
         })
-        this.addSubview("ul.item-items", itemPieceView)
+        this.addSubview("ul.list-items", itemElementView)
     },
     
     removeView: function(model){
