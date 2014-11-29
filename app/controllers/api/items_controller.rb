@@ -1,11 +1,10 @@
 class Api::ItemsController < ApplicationController
   def index
     @items = Item.all
-    render json: @items
   end
 
   def show
-    render json: item.find(params[:id]) 
+    @item = Item.find(params[:id]) 
   end
 
   def create
