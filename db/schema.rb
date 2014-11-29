@@ -16,17 +16,20 @@ ActiveRecord::Schema.define(version: 20141126184129) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "items# force: true do |t|
+  create_table "items", force: true do |t|
     t.string   "title",       null: false
     t.decimal  "price",       null: false
     t.text     "description", null: false
     t.string   "image_url"
-    t.integer  "quantity"
+    t.string   "quantity"
     t.integer  "seller_id"
     t.integer  "cart_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "items", ["seller_id"], name: "index_items_on_seller_id", using: :btree
+  add_index "items", ["title"], name: "index_items_on_title", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "username",        null: false
@@ -36,8 +39,10 @@ ActiveRecord::Schema.define(version: 20141126184129) do
     t.datetime "updated_at"
     t.string   "filepicker_url"
     t.string   "email"
+    t.text     "description"
   end
 
   add_index "users", ["session_token"], name: "index_users_on_session_token", unique: true, using: :btree
+  add_index "users", ["username"], name: "index_users_on_username", using: :btree
 
 end

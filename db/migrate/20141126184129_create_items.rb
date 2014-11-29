@@ -5,11 +5,14 @@ class CreateItems < ActiveRecord::Migration
       t.decimal :price, null: false
       t.text :description, null: false
       t.string :image_url
-      t.integer :quantity
+      t.string :quantity
       t.integer :seller_id
       t.integer :cart_id
 
       t.timestamps
     end
+
+      add_index :items, :seller_id
+      add_index :items, :title
   end
 end

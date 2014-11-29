@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   
   after_initialize :ensure_session_token
   
+  has_many :items, class_name: "Item", foreign_key: "seller_id"
+
   attr_reader :password
   
   def self.find_by_credentials(username, password)
