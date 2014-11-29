@@ -1,4 +1,40 @@
 <h3>This is the item show page ;) </h3>
-Oh, it's item <%= item.escape("id") %>, title <%= item.escape("title") %> by the way. 
-Hope you will beautify me soon <3
 
+<div id='item-body' class='shop-container'>
+	<div id='left'>
+		<div id='item-image'>
+		</div>
+		
+		<div id='item-description'>
+		
+	        </div>  	
+		<div id='item-review'>
+                </div>
+		
+	</div>
+	
+	<div id='right'>
+		<div class='right-container'>
+			<div id='item-right' class='right-default'>
+				<div class='right-top'>
+					<h4 class='bold'> <%= item.escape('title') %> </h4>
+					<h4 class='bold'> $<%= item.escape('price') %>  silver</h4>
+				</div>
+			
+				<div class='right-body'>
+					<p class='bold underline'> Overview </p>
+					<ul id='overview'>
+						<li> Available: <%= item.escape('quantity') %> </li>
+                                                <li> Reviews summary here maybe? </li>
+					</ul>
+				</div>
+			
+				<div class='right-bottom'>
+					<button class='btn' id='add-cart-button'>Add to Cart</button>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+</div>

@@ -70,3 +70,52 @@
     margin-bottom: 5px;
     margin-left: 15%;
 }
+
+#item-body {
+	background: white;
+	border-radius: 10px;
+	padding: 20px 10px;
+}
+
+#left {
+	max-width: 75%;
+	margin-left: 20px;
+	float: left;
+}
+
+#right {
+	width: 25%;
+	float:right ;
+	margin-right: 20px;
+}
+
+.right-container {
+	padding: 10px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.right-container {
+	#item-right, #shop-right {
+		margin-bottom: 0px;
+	}
+}
+
+.item-details {
+	width: 200px;
+}
+
+#overview {
+	list-style: none;
+}
+
+.right-container .right-default {
+    border: none;
+}
+
+#cart-button {
+	width: 100%;
+	border: none;
+}
+
+
