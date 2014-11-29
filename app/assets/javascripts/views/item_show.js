@@ -1,3 +1,16 @@
-<h3>This is the item show page ;) </h3>
-Oh, it's item <%= item.escape("id") %>, title <%= item.escape("title") %> by the way. 
-Hope you will beautify me soon <3
+PrancingPony.Views.ItemShow = Backbone.View.extend({
+    template: JST['items/show'],
+
+    initialize: function() {
+        this.listenTo(this.model, 'sync', this.render);
+    },
+
+    render: function() {
+        var content = this.template({
+            item: this.model
+        });
+        this.$el.html(content);
+        return this;
+    }
+
+})

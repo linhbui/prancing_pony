@@ -1,7 +1,7 @@
-PrancingPony.Collections.Items = Backbone.Collection.extend {
+PrancingPony.Collections.Items = Backbone.Collection.extend({
     model: PrancingPony.Models.Item,
 
-    url: 'api/items',
+    url: '/api/items',
 
     getOrFetch: function (id) {
         var model = this.get(id);
@@ -16,6 +16,6 @@ PrancingPony.Collections.Items = Backbone.Collection.extend {
         }
         return model;
     }
-}
+})
 
 PrancingPony.Collections.items = new PrancingPony.Collections.Items

@@ -1,4 +1,4 @@
-PrancingPony.Views.itemsIndex = Backbone.CompositeView.extend({
+PrancingPony.Views.ItemsIndex = Backbone.CompositeView.extend({
     template: JST['items/index'],
     
     events: {

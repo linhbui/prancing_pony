@@ -4,7 +4,7 @@ window.PrancingPony = {
   Views: {},
   Routers: {},
   initialize: function() {
-    new PrancingPony.Routers.AppRouter({
+    new PrancingPony.Routers.Router({
       $rootEl: $("div#content")
     });
     Backbone.history.start(); 

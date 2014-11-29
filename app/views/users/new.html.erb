@@ -27,8 +27,9 @@
               <div class="input-group">
                 <span class="input-group-addon glyphicon glyphicon-picture"></span>
                 <%= f.filepicker_field :filepicker_url,
+                                     class: 'form control',
                                      button_text: 'Upload Avatar',
-                                     button_class: 'form-control btn btn-info', 
+                                     button_class: 'btn btn-info', 
                                      placeholder: 'Avatar URL',
                                      services: 'COMPUTER, IMAGE_SEARCH, URL' %>
               </div>

@@ -4,8 +4,10 @@
   <title>PrancingPony</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
+  <script>filepicker.setKey("A3l8fJlVdRSKp7x6lTxzPz")</script>
   <%= csrf_meta_tags %>
-  <%= filepicker_js_include_tag %>
+  <%#<%= filepicker_js_include_tag %>
 </head>
 <body>
     <%= render "layouts/nav" %>
