@@ -1,3 +1,146 @@
 // Place all the styles related to the Items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*#content {*/
+    /*width: 600px;*/
+/*}*/
+.item-show-container {
+    background-color: white;
+    padding: 20px;
+    margin-left: 95px;
+    margin-right: 95px;
+    margin-bottom: 28px;
+    width: 80%;
+    overflow: auto;
+}
+
+#item-body {
+    background: white;
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+
+.item-images {
+    position: relative;
+}
+
+.item-index-image {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+}
+
+.item-seller-avatar {
+    width: 23%;
+    z-index: 3;
+    position: absolute;
+    bottom: -8px;
+    right: 0px;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+}
+
+.left {
+    width: 530px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#item-description, #item-review {
+    margin-top: 30px;
+    border-top: 1px solid #DADBD6;
+    h3 {
+        font-family: Times;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+}
+
+.right {
+    width: 310px;
+    float:right ;
+    margin-top: 20px;
+}
+
+.right-container {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.green {
+    background-color: #E4F3D9;
+}
+
+.blue {
+    background-color: #E5F4F7;
+}
+
+.right-container {
+    .right-top {
+        margin-bottom: 10px;
+        background-color: white;
+        padding: 15px;
+        overflow: auto;
+    }
+}
+
+.item-details {
+    width: 200px;
+}
+
+#overview {
+    padding-left: 0px;
+    list-style: none;
+}
+
+.right-container .right-default {
+    border: none;
+}
+
+.right-container {
+    margin-bottom: 30px;
+}
+
+#item-image {
+    width: 100%;
+}
+
+#item-image img {
+    margin-top: 5px;
+    width: 100%;
+}
+
+.right-item-title {
+    font-family: Times;
+    font-size: 18;
+    word-wrap: break-word;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+#add-cart-button {
+    background-color: #A1CB59;
+    width: 100%;
+    color: white;
+}
+
+#add-cart-button:hover {
+    background-color: #69AA07;
+}
+
+.lower-seller-avatar {
+   display: block;
+   width: 100%;
+}
+
+.lower-seller-name {
+  margin-top: 8%;
+  display: inline-block;
+  color: #82888A;
+  font-size: 1.7vw;
+  width: 100%;
+  text-align: center;
+}

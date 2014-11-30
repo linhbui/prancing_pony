@@ -4,7 +4,19 @@ class User < ActiveRecord::Base
   
   after_initialize :ensure_session_token
   
-  has_many :items, class_name: "Item", foreign_key: "seller_id"
+  has_many(
+    :items, 
+    class_name: "Item", 
+    foreign_key: "seller_id",
+    inverse_of: :seller
+  ) 
+
+  has_many(
+      :reviews,
+      class_name: "Review",
+      foreign_key: "author_id",
+      inverse_of: :author
+  )
 
   attr_reader :password
   

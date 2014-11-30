@@ -14,6 +14,13 @@ arwen = User.create(
     filepicker_url: "http://arwen-undomiel.com/images/arwen/Arwen_RotK_3.jpg"
 )
 
+king = User.create(
+    username: "Witch King of Angmar",
+    email: "king@prancingpony.rocks",
+    password: "password",
+    filepicker_url: "http://img4.wikia.nocookie.net/__cb20120303233955/lotr/images/6/6e/Witch_King.png"
+)
+
 sauron = User.create(
     username: "Sauron",
     email: "sauron@prancingpony.rocks",
@@ -211,3 +218,11 @@ ringbearer = frodo.items.create!(
     description: "Special courier service for ring. Will carry any kind of ring anywhere on Middle-earth. The price is negotiable.",
     image_url: "http://writerunboxed.com/wp-content/uploads/2006/04/Frodo20with20ring.jpg"
 )
+
+# Reviews
+king.reviews.create!(
+    content: "This precious ring has completely changed my life! Now I cannot sleep without my precious. My precious…",
+    stars: 5,
+    item_id: ring.id
+)
+

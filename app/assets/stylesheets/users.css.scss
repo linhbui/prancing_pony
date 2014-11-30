@@ -1,3 +1,34 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.users_form .btn .btn-info {
+    width: 70%;
+    margin-bottom: 5px;
+    margin-left: 15%;
+}
+
+#welcome-page {
+    padding-top: 4%;
+    margin-bottom: 17px;
+    color: white;
+    text-align: center;
+}
+
+#root-background {
+    background-image: url("/assets/inn.jpg");
+    background-size: cover;
+    
+    background-position: 50% 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
