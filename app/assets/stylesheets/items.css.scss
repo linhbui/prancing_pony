@@ -139,8 +139,17 @@
 .lower-seller-name {
   margin-top: 8%;
   display: inline-block;
-  color: #82888A;
+  color: grey;
   font-size: 1.7vw;
   width: 100%;
   text-align: center;
+}
+
+#item-seller h3 {
+    margin-top: 0px;
+    font-family: Times;
+    font-weight: 600;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px; 
 }
