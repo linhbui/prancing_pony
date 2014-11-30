@@ -16,7 +16,7 @@
     </div>
         
     <div class='right'>
-        <div class='right-container'>
+        <div class='right-container green'>
             <div id='item-right' class='right-default'>
                 <div class='right-top'>
                     <h2 class='bold right-item-title'> <%= item.escape('title') %> </h2>
@@ -25,13 +25,30 @@
                     <ul id='overview'>
                             <li> Available: <%= item.escape('quantity') %> </li>
                             <li> Reviews summary here maybe? </li>
+                            <li>Favorite count too?</li>
                     </ul>
                 </div>
         
                 <div class='right-bottom'>
                         <button class='btn' id='add-cart-button'>Add to Cart</button>
                 </div>
-            </div>
-        </div>
+            </div> <!-- close item-right -->
+        </div> <!-- close right-container -->
+
+        <div class='right-container blue'>
+            <div id="item-seller" class='right-default'>
+                <div class="right-top">
+                <h3 class='center'>Meet the seller</h3>
+                  <div class='col-xs-8 col-xs-offset-2' style='text-align:center'>
+                      <a href='#/users/<%= item.escape("user_id") %>'>
+                    <img src='<%= item.get("seller_image_url") %>' class='img-circle lower-seller-avatar'>
+                    <div class='lower-seller-name'>
+                      <%= item.escape("seller") %>
+                    </div>
+                </a>
+                   </div> 
+                </div>
+            </div> <!-- close item seller -->
+        </div> <!-- close right-container -->
     </div>
 </div>

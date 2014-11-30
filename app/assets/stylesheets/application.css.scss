@@ -16,6 +16,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+    padding-top: 70px;
+}
+
+.center {
+    text-align: center;
+}
+
 #dummybodyid {
     background-color: #f5f5f1;
 }
@@ -133,7 +141,6 @@
     h3 {
         font-family: Times;
         font-weight: 600;
-        text-align: center;
         margin-bottom: 10px;
     }
 }
@@ -148,14 +155,21 @@
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
+}
+
+.green {
     background-color: #E4F3D9;
 }
 
+.blue {
+    background-color: #E5F4F7;
+}
 .right-container {
     .right-top {
         margin-bottom: 10px;
         background-color: white;
         padding: 15px;
+        overflow: auto;
     }
 }
 
@@ -170,6 +184,10 @@
 
 .right-container .right-default {
     border: none;
+}
+
+.right-container {
+    margin-bottom: 30px;
 }
 
 #cart-button {
@@ -202,4 +220,18 @@
 
 #add-cart-button:hover {
     background-color: #69AA07;
+}
+
+.lower-seller-avatar {
+   display: block;
+   width: 100%;
+}
+
+.lower-seller-name {
+  margin-top: 8%;
+  display: inline-block;
+  color: #82888A;
+  font-size: 1.7vw;
+  width: 100%;
+  text-align: center;
 }
