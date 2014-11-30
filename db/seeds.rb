@@ -32,7 +32,8 @@ galadriel = User.create(
     username: "Galadriel",
     email: "galadriel@prancingpony.rocks", 
     password: 'password',
-    filepicker_url: "http://arwen-undomiel.com/images/galadriel/Galadriel_earnest.jpg")
+    filepicker_url: "http://th02.deviantart.net/fs70/PRE/i/2014/074/4/e/galadriel_by_lotsoflowe-d7ac7tu.png"
+)
 
 elrond = User.create(
     username: "Elrond", 

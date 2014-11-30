@@ -14,6 +14,8 @@
 //= require jquery.serializejson
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require masonry.pkgd
+//= require imagesloaded.pkgd
 //= require underscore
 //= require backbone
 //= require prancing_pony

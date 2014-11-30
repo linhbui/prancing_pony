@@ -27,7 +27,7 @@ PrancingPony.Views.ItemsIndex = Backbone.CompositeView.extend({
         var itemElementView = new PrancingPony.Views.ItemElement({
             model: model
         });
-        this.addSubview("ul.list-items", itemElementView)
+        this.addSubview("div.list-items", itemElementView)
     },
     
     removeView: function(model){
@@ -36,7 +36,7 @@ PrancingPony.Views.ItemsIndex = Backbone.CompositeView.extend({
                 return true;
             }
         })
-        this.removeSubview("ul.list-items", subview);
+        this.removeSubview("div.list-items", subview);
     },
 
     
@@ -44,9 +44,17 @@ PrancingPony.Views.ItemsIndex = Backbone.CompositeView.extend({
         var content = this.template();
         this.$el.html(content);
         this.attachSubviews();
+        //this.masonry();
         return this;
-    },
+    }
     
+    //masonry: function() {
+        //var $container = $('#content');
+        //var msnry = new Masonry($container[0], {
+          //itemSelector: '.item-msnry',
+          //columnWidth: 200
+        //});
+    //}
 
 });
 
