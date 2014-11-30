@@ -21,6 +21,12 @@ king = User.create(
     filepicker_url: "http://img4.wikia.nocookie.net/__cb20120303233955/lotr/images/6/6e/Witch_King.png"
 )
 
+aragorn = User.create(
+    username: "Aragorn",
+    email: "aragorn@prancingpony.rocks",
+    password: "password",
+    filepicker_url: "http://www.ageofthering.com/atthemovies/cast/aragorn.jpg"
+)
 sauron = User.create(
     username: "Sauron",
     email: "sauron@prancingpony.rocks",
@@ -98,16 +104,16 @@ saruman = User.create(
     filepicker_url: "http://s3.amazonaws.com/televicentro/portadas/saruman.jpg?mtime=20140528114103"
 )
 
-gimly = User.create(
-    username: "Gimly",
-    email: "gimly@prancingpony.rocks",
+gimli = User.create(
+    username: "Gimli",
+    email: "gimli@prancingpony.rocks",
     password: "password",
     filepicker_url: "http://www.eonline.com/eol_images/Entire_Site/20101110/300.gimli.lr.121010.jpg"
 )
 
 # Items
 ring = sauron.items.create!(
-    title: "Ring",
+    title: "Ring of Power",
     price: 1000000, 
     description: "Magical elven rings in limited quantity. Each ring is imbued with magical power that enhances user’s health and aids fighting depression, fatigue, indigestion, muscle cramp, headache, constipation, diarrhea, and death.*
 
@@ -226,3 +232,98 @@ king.reviews.create!(
     item_id: ring.id
 )
 
+frodo.reviews.create!(
+    content: "Do not trust this vendor. I was almost eaten by a gigantic spider and lost a finger. One star is too many, I would give zero star if I could.",
+    stars: 1,
+    item_id: entry.id
+)
+
+pippin.reviews.create!(
+    content: "Meh. Tastes really good, but I could eat 4 at once.",
+    stars: 3,
+    item_id: bread.id
+)
+
+gollum.reviews.create!(
+    content: "Stupid hobbitses. We hates elven stuff. Sushi tastes better. Bah! Gollum, gollum.",
+    stars: 1,
+    item_id: bread.id
+)
+
+gimli.reviews.create!(
+    content: "It’s so beautiful. I’m going to pass it down as a family heirloom.",
+    stars: 5,
+    item_id: hair.id   
+)
+
+frodo.reviews.create!(
+    content: "Effective against Mordor guard. Not as effective as the Ring.",
+    stars: 4,
+    item_id: cloak.id
+)
+
+sam.reviews.create!(
+    content: "Works great as an insecticide too, especially against spiders!",
+    stars: 5,
+    item_id: light.id
+)
+
+sam.reviews.create!(
+    content: "Especially good for tying a foul creature. The only gripe I have is that this rope is too expensive for throw-out. I would have tied down one and let it starve to death if it were sold in half the price.",
+    stars: 4,
+    item_id: rope.id
+)
+
+gollum.reviews.create!(
+    content: "It burnsssss us! Stupid hobbit, stupid cruel fat hobbit hurts poor Smeagol!",
+    stars: 1,
+    item_id: rope.id
+)
+
+aragorn.reviews.create!(
+    content: 'The sword looks like new! I like it so much that I gave my sword a new name!',
+    stars: 5,
+    item_id: sword.id
+)
+
+gandalf.reviews.create!(
+    content: "Tastes great! I get a nice discount, too.",
+    stars: 5,
+    item_id: pipeweed.id
+)
+
+saruman.reviews.create!(
+    content: "Gandalf, your wisdom has decreased because you smoke this. I’ll do you a favor and buy them all for your sake.",
+    stars: 1,
+    item_id: pipeweed.id
+)
+
+frodo.reviews.create!(
+    content: "Meh. Good enough.",
+    stars: 3,
+    item_id: gardening.id
+)
+
+frodo.reviews.create!(
+    content: "He’s really devoted, but perhaps too paranoid. He did save me from the spider but followed me to bathroom and kicked Gollum whenever he came near me.",
+    stars: 3,
+    item_id: bodyguard.id
+)
+
+pippin.reviews.create!(
+    content: "Now I'm taller than Merry!",
+    stars: 5,
+    item_id: draught.id
+)
+
+merry.reviews.create!(
+    content: "No, now I'm taller again. Everything is back to where it should be.",
+    stars: 5,
+    item_id: draught.id
+)
+
+gandalf.reviews.create!(
+    content: "He have done a great job carrying the Ring of Power. Looking forward to doing a business again.",
+    stars: 5,
+    item_id: ringbearer.id 
+)
