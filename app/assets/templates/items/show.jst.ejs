@@ -1,38 +1,37 @@
+<div class="item-show-container">
+    <div class='left'>
+        <div id='item-image'>
+           <img src=<%= item.escape("image_url") %> alt="...">
+        </div>
+        
+        <div id='item-description'>
+           <h3> Description </h3>
+           <p><%= item.escape("description") %></p>
+        </div>  	
 
+        <div id='item-review'>
+           <h3> Review </h3>
+        </div>
+            
+    </div>
+        
+    <div class='right'>
+        <div class='right-container'>
+            <div id='item-right' class='right-default'>
+                <div class='right-top'>
+                    <h2 class='bold right-item-title'> <%= item.escape('title') %> </h2>
+                    <h4 class='bold'> $<%= item.escape('price').slice(0,-2) %> silvers</h4>
 
-	<div class='left'>
-		<div id='item-image'>
-                   <img src=<%= item.escape("image_url") %> alt="...">
-		</div>
-		
-		<div id='item-description'>
-	           <h3> Description </h3>
-                   <p><%= item.escape("description") %></p>
-	        </div>  	
-		<div id='item-review'>
-	           <h3> Review </h3>
+                    <ul id='overview'>
+                            <li> Available: <%= item.escape('quantity') %> </li>
+                            <li> Reviews summary here maybe? </li>
+                    </ul>
                 </div>
-		
-	</div>
-	
-	<div class='right'>
-		<div class='right-container'>
-			<div id='item-right' class='right-default'>
-				<div class='right-top'>
-                                    <h2 class='bold right-item-title'> <%= item.escape('title') %> </h2>
-                                    <h4 class='bold'> $<%= item.escape('price').slice(0,-2) %> silvers</h4>
-                    
-                                    <ul id='overview'>
-                                            <li> Available: <%= item.escape('quantity') %> </li>
-                                            <li> Reviews summary here maybe? </li>
-                                    </ul>
-				</div>
-			
-				<div class='right-bottom'>
-					<button class='btn' id='add-cart-button'>Add to Cart</button>
-				</div>
-			</div>
-		</div>
-		
-	</div>
-	
+        
+                <div class='right-bottom'>
+                        <button class='btn' id='add-cart-button'>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

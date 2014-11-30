@@ -20,13 +20,14 @@
     background-color: #f5f5f1;
 }
 
-.container {
+.item-show-container {
     background-color: white;
-    padding: 28px;
-    margin-top: 22px;
-    margin-left:105px;
-    margin-right:105px;
+    padding: 20px;
+    margin-left: 95px;
+    margin-right: 95px;
+    margin-bottom: 28px;
     width: 80%;
+    overflow: auto;
 }
 
 #root-background {
@@ -120,7 +121,7 @@
 }
 
 .left {
-    width: 560px;
+    width: 530px;
     float: left;
     margin-top: 20px;
     margin-left: 10px;

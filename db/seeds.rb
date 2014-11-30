@@ -109,6 +109,23 @@ ring = sauron.items.create!(
    quantity: "19",
 )
 
+sword = elrond.items.create!(
+    title: "Elrond's Sword Repair Service",
+    price: 300,
+    description: "Master blacksmith Elrond finally offers his service online. After buying the item, an email will be sent for instruction. Print the shipping label and ship your sword to Rivendell via Middle-earth Post Services. The sword will be returned in 10 days. 30-day money back guarantee.",
+    image_url: "http://tolkiengateway.net/w/images/thumb/e/ea/Noble_Collection_-_And%C3%BAril.jpg/250px-Noble_Collection_-_And%C3%BAril.jpg",
+    quantity: "unlimited"
+)
+
+draught = treebeard.items.create!(
+    title: "Ent Draught",
+    price: 30,
+    description: "Best Ayurvedic medicine of all time, now available. Too short to court the ladies? Ever laughed at for being vertically challenged? Ent-draught is here to help. Regular consumption of ent-draught helps your physical growth even in adulthood.* All organic, non-GMO and growth hormone-free.
+*This statement has not been verified by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.",
+    image_url: "http://img2.wikia.nocookie.net/__cb20121201081302/lotr/images/a/a5/Pippin_and_Ent-Draught.png",
+    quantity: "10"
+)
+
 entry = gollum.items.create!(
     title: "Secret Entry to Mordor",
     price: 10,
@@ -141,13 +158,12 @@ cloak = galadriel.items.create!(
     quantity: 10
 )
 
-light = galadriel.items.create!(
-    title: "Light of Earendil",
-    price: 50,
-    description: "A Swarovski crystal vial containing water from Galadriel’s fountain and the light of Eärendil's star. 
-    Usage: use as a lantern, or rub a drop of water in for a temporary alleviation of a curse.",
-    image_url: "http://i.ytimg.com/vi/zp9ThyRK9IM/maxresdefault.jpg",
-    quantity: 2
+pipeweed = pippin.items.create!(
+    title: "Shire Pipeweed",
+    price: 5,
+    description: "The backordered Southfarthing Longbottom pipeweed is now available! Simply the finest pipeweed on Middle-earth. Have a taste of hobbit-made, Maiar-approved smoke.",
+    image_url: "http://img3.wikia.nocookie.net/__cb20121117101001/lotr/images/b/b9/Merry.jpg",
+    quantity: "unlimited"
 )
 
 rope = galadriel.items.create!(
@@ -156,22 +172,6 @@ rope = galadriel.items.create!(
     description: "A Swarovski crystal vial containing water from Galadriel’s fountain and the light of Eärendil's star. Usage: use as a lantern, or rub a drop of water in for a temporary alleviation of a curse.",
     image_url: "http://img2.wikia.nocookie.net/__cb20140428205712/lotr/images/f/fb/Tumblr_inline_mlndwhvKLr1qz4rgp.jpg",
     quantity: 1
-)
-
-sword = elrond.items.create!(
-    title: "Elrond's Sword Repair Service",
-    price: 300,
-    description: "Master blacksmith Elrond finally offers his service online. After buying the item, an email will be sent for instruction. Print the shipping label and ship your sword to Rivendell via Middle-earth Post Services. The sword will be returned in 10 days. 30-day money back guarantee.",
-    image_url: "http://tolkiengateway.net/w/images/thumb/e/ea/Noble_Collection_-_And%C3%BAril.jpg/250px-Noble_Collection_-_And%C3%BAril.jpg",
-    quantity: "unlimited"
-)
-
-pipeweed = pippin.items.create!(
-    title: "Shire Pipeweed",
-    price: 5,
-    description: "The backordered Southfarthing Longbottom pipeweed is now available! Simply the finest pipeweed on Middle-earth. Have a taste of hobbit-made, Maiar-approved smoke.",
-    image_url: "http://img3.wikia.nocookie.net/__cb20121117101001/lotr/images/b/b9/Merry.jpg",
-    quantity: "unlimited"
 )
 
 gardening = sam.items.create!(
@@ -188,13 +188,13 @@ bodyguard = sam.items.create!(
     image_url: "http://www.crankycritic.com/archive02/papers/lotr2/lotr2_sam-frodo_800.jpg"
 )
 
-draught = treebeard.items.create!(
-    title: "Ent Draught",
-    price: 30,
-    description: "Best Ayurvedic medicine of all time, now available. Too short to court the ladies? Ever laughed at for being vertically challenged? Ent-draught is here to help. Regular consumption of ent-draught helps your physical growth even in adulthood.* All organic, non-GMO and growth hormone-free.
-*This statement has not been verified by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.",
-    image_url: "http://img2.wikia.nocookie.net/__cb20121201081302/lotr/images/a/a5/Pippin_and_Ent-Draught.png",
-    quantity: "10"
+light = galadriel.items.create!(
+    title: "Light of Earendil",
+    price: 50,
+    description: "A Swarovski crystal vial containing water from Galadriel’s fountain and the light of Eärendil's star. 
+    Usage: use as a lantern, or rub a drop of water in for a temporary alleviation of a curse.",
+    image_url: "http://i.ytimg.com/vi/zp9ThyRK9IM/maxresdefault.jpg",
+    quantity: 2
 )
 
 house = frodo.items.create!(
