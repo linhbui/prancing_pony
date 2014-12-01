@@ -60,7 +60,9 @@ PrancingPony.Views.ItemsIndex = Backbone.CompositeView.extend({
                 queue: false
             }   
         });
+        imagesLoaded( $container, function() {
+        msnry.layout();
+        });
     }
-
 });
 
