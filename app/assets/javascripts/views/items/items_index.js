@@ -51,8 +51,8 @@ PrancingPony.Views.ItemsIndex = Backbone.CompositeView.extend({
     //masonry: function() {
         //var $container = $('#content');
         //var msnry = new Masonry($container[0], {
-          //itemSelector: '.item-msnry',
-          //columnWidth: 200
+          //itemSelector: '.thumbnail',
+          //columnWidth: 150
         //});
     //}
 
