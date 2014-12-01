@@ -44,17 +44,23 @@ PrancingPony.Views.ItemsIndex = Backbone.CompositeView.extend({
         var content = this.template();
         this.$el.html(content);
         this.attachSubviews();
-        //this.masonry();
+        this.masonry();
         return this;
-    }
+    },
     
-    //masonry: function() {
-        //var $container = $('#content');
-        //var msnry = new Masonry($container[0], {
-          //itemSelector: '.thumbnail',
-          //columnWidth: 150
-        //});
-    //}
+    masonry: function() {
+        var $container = $('.list-items');
+        var msnry = new Masonry($container[0], {
+            itemSelector: '.item-thumbnail',
+            columnWidth: '.item-thumbnail',
+            isAnimated: true,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }   
+        });
+    }
 
 });
 
