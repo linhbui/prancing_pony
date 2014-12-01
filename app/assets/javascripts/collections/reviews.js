@@ -12,6 +12,6 @@ PrancingPony.Collections.Reviews = Backbone.Collection.extend({
         this.each(function(review) {
             sumStars += review.get('stars');
         });
-        return Math.ceil(stars/this.length);
+        return Math.ceil(sumStars/this.length);
     }
 })

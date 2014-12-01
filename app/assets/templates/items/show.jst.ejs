@@ -10,10 +10,21 @@
         </div>  	
 
         <div id='item-review'>
-           <h3>Reviews</h3>
-               <div id="reviews-list">
-                   
-               </div>
+            <div class="row review-average">
+                <div class="col-md-3">
+                    <h3><%= item.reviews().length %> Reviews </h3>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="top-stars">
+                       <%= item.avgStarsStr() %>
+                    </div>
+                </div>
+            </div>
+                    
+           <div id="reviews-list">
+               
+           </div>
         </div>
             
     </div>

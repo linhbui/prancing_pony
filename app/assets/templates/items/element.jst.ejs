@@ -6,6 +6,7 @@
         </div>
       <div class="caption">
           <h3><%= item.escape("title")%></h3>
+          <p><%= item.avgStarsStr() %></p>
           <h5>Price: <%= item.escape("price").slice(0,-2) %> silvers</h5>
           <p><%= item.escape("description").slice(0,100) %>... <a href="#/items/<%= item.id %>">Read more</a></p>
           <p>Sold by <%= item.escape("seller") %> </p>

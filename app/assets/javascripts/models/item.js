@@ -8,8 +8,16 @@ PrancingPony.Models.Item = Backbone.Model.extend({
         return this._reviews;
     },
     
-    starsStr: function() {
-        
+    avgStarsStr: function() {
+         var x;
+         var str = "";
+         for(x = 0; x < this.reviews().averageReviews(); x++) { 
+              str += "<span class='filled'>★</span>";
+         }
+         for(; x < 5; x++) { 
+              str += "<span>☆</span>";
+         }
+         return str;
     },
 
     parse: function(payload) {
