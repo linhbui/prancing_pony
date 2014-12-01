@@ -1,10 +1,10 @@
 class Api::ItemsController < ApplicationController
   def index
-    @items = Item.all
+    @items = Item.includes(:reviews).all
   end
 
   def show
-    @item = Item.find(params[:id]) 
+    @item = Item.includes(:reviews).find(params[:id]) 
   end
 
   def create

@@ -46,6 +46,11 @@ body {
     color: #6F6666;
 }
 
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 /*navbar*/
 .navbar-brand img {
     height: 50px;
