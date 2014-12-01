@@ -39,6 +39,7 @@ PrancingPony.Routers.Router = Backbone.Router.extend({
       this.currentView && this.currentView.remove();
       this.currentView = view;
       this.$rootEl.html(this.currentView.render().$el);
+      $(document).scrollTop(0);    
     }
 
 })

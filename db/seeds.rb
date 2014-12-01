@@ -113,10 +113,10 @@ gimli = User.create(
 
 # Items
 ring = sauron.items.create!(
-    title: "Ring of Power",
+    title: "Rings of Power",
     price: 1000000, 
     description: "Magical elven rings in limited quantity. Each ring is imbued with magical power that enhances user’s health and aids fighting depression, fatigue, indigestion, muscle cramp, headache, constipation, diarrhea, and death.*
-
+\n
 *This statement has not been verified by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.",
    image_url: "http://transmissionsmedia.com/wp-content/uploads/2012/09/lotr.jpg",
    quantity: "19",
@@ -133,7 +133,9 @@ sword = elrond.items.create!(
 draught = treebeard.items.create!(
     title: "Ent Draught",
     price: 30,
-    description: "Best Ayurvedic medicine of all time, now available. Too short to court the ladies? Ever laughed at for being vertically challenged? Ent-draught is here to help. Regular consumption of ent-draught helps your physical growth even in adulthood.* All organic, non-GMO and growth hormone-free.
+    description: "Best Ayurvedic medicine of all time, now available. Too short to court the ladies? Ever laughed at for being vertically challenged? Ent-draught is here to help. Regular consumption of ent-draught helps your physical growth even in adulthood.* 
+All organic, non-GMO and growth hormone-free. 
+\n
 *This statement has not been verified by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.",
     image_url: "http://img2.wikia.nocookie.net/__cb20121201081302/lotr/images/a/a5/Pippin_and_Ent-Draught.png",
     quantity: "10"
@@ -182,7 +184,7 @@ pipeweed = pippin.items.create!(
 rope = galadriel.items.create!(
     title: "Elven Rope",
     price: 100,
-    description: "A Swarovski crystal vial containing water from Galadriel’s fountain and the light of Eärendil's star. Usage: use as a lantern, or rub a drop of water in for a temporary alleviation of a curse.",
+    description: "Handcrafted by an elven master craftsman, this rope stays knotted when you want it to, but undoes itself when you tug it in certain way.",
     image_url: "http://img2.wikia.nocookie.net/__cb20140428205712/lotr/images/f/fb/Tumblr_inline_mlndwhvKLr1qz4rgp.jpg",
     quantity: 1
 )
@@ -251,7 +253,7 @@ gollum.reviews.create!(
 )
 
 gimli.reviews.create!(
-    content: "It’s so beautiful. I’m going to pass it down as a family heirloom.",
+    content: "I got three! They are so beautiful. I’m going to pass it down as a family heirloom.",
     stars: 5,
     item_id: hair.id   
 )

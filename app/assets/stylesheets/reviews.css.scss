@@ -1,3 +1,77 @@
 // Place all the styles related to the Reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.review-wrapper {
+    border-bottom: 1px solid #DCE0E0;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    clear: both;
+}
+
+.review-author {
+    text-align: center;
+    h5 {
+        font-weight: normal;
+        font-size: 13px;
+        margin: 0px;
+    }
+}
+
+.review-author-img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+.review-content {
+    padding-left: 3px;
+    padding-top: 10px;
+}
+
+.review-created-at {
+    p {
+        margin: 0;
+    }
+    text-align: right;
+    width: 200px;
+    float: right;
+}
+
+.stars {
+    display: inline-block;
+}
+
+.review-bottom {
+    margin-top: 20px;
+}
+
+.star {
+    float: right;
+    padding: 0 2px;
+}
+
+.filled {
+    color: gold;
+    content: "\2605";
+}
+
+.review-item-image img {
+    width: 50px;
+    max-height: 50px;
+}
+
+.review-item-image {
+    padding-left: 20px; 
+}
+
+.review-item-title {
+    float: left;
+    padding-top: 7px;
+}
+
+.review-item-title p {
+    margin-left: -15px;
+}
+

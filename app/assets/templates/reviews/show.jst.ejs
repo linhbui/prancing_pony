@@ -1,0 +1,42 @@
+<div class="row">
+    
+<div class='col-md-3 review-author'>
+    <img src="<%= review.escape("author_image_url") %>" class='img-circle review-author-img'>
+    <h5> Reviewed By </h5>
+    <h5 class='author-name'><a href="#"><%= review.escape('author') %></a></h5>
+</div>
+
+<div class='col-md-9'>
+    <div class='review-top'>
+        <div class='stars'>
+            <% var x; %>
+            <% for (x = review.get('stars'); x < 5; x++) { %>
+                <div class='star'>☆</div>
+            <% } %>
+            <% for (x = 0; x < review.get('stars'); x++) { %>
+                    <div class='star filled'>★</div>
+            <% } %>
+        </div>
+                        
+        <div class='review-created-at'>
+            <p style="font-size: 14px; color: grey;"> <%= review.date() %> </p>
+        </div>
+        
+        <div class='review-content'>
+            <p> <%= review.escape('content') %> </p>
+        </div>
+        
+        <div class='row review-bottom'>
+            <div class='col-md-2 review-item-image'>
+                <img src="<%= item.escape("image_url") %>">
+            </div>
+            <div class='col-md-4 review-item-title'>
+                    <p style="font-size: 13px"> <%= item.escape('title') %> </p>
+            </div>
+        </div>
+
+            
+    </div>
+</div>
+
+</div>
