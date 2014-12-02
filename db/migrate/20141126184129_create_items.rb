@@ -7,7 +7,6 @@ class CreateItems < ActiveRecord::Migration
       t.string :image_url
       t.string :quantity
       t.integer :seller_id
-      t.integer :cart_id
 
       t.timestamps
     end

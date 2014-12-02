@@ -11,26 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141202030744) do
+ActiveRecord::Schema.define(version: 20141130085430) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "cart_items", force: true do |t|
-    t.integer  "cart_id",    null: false
-    t.integer  "item_id",    null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "cart_items", ["cart_id"], name: "index_cart_items_on_cart_id", using: :btree
-  add_index "cart_items", ["item_id"], name: "index_cart_items_on_item_id", using: :btree
-
-  create_table "carts", force: true do |t|
-    t.integer  "user_id",    null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "items", force: true do |t|
     t.string   "title",       null: false
@@ -39,6 +23,7 @@ ActiveRecord::Schema.define(version: 20141202030744) do
     t.string   "image_url"
     t.string   "quantity"
     t.integer  "seller_id"
+    t.integer  "cart_id" #drop this later
     t.datetime "created_at"
     t.datetime "updated_at"
   end
