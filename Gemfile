@@ -28,6 +28,7 @@ gem 'spring',        group: :development
 gem 'bcrypt', '~> 3.1.7'
 
 #backbone
+
 gem 'backbone-on-rails'
 gem 'ejs'
 gem 'filepicker-rails'

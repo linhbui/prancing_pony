@@ -111,6 +111,12 @@ gimli = User.create(
     filepicker_url: "http://www.eonline.com/eol_images/Entire_Site/20101110/300.gimli.lr.121010.jpg"
 )
 
+grima = User.create(
+    username: "Grima",
+    email: "grima@prancingpony.rocks",
+    password: "password",
+    filepicker_url: "http://arwen-undomiel.com/images/other/Grima_creepy.jpg"
+)
 # Items
 ring = sauron.items.create!(
     title: "Rings of Power",
@@ -128,6 +134,13 @@ sword = elrond.items.create!(
     description: "Master blacksmith Elrond finally offers his service online. After buying the item, an email will be sent for instruction. Print the shipping label and ship your sword to Rivendell via Middle-earth Post Services. The sword will be returned in 10 days. 30-day money back guarantee.",
     image_url: "http://tolkiengateway.net/w/images/thumb/e/ea/Noble_Collection_-_And%C3%BAril.jpg/250px-Noble_Collection_-_And%C3%BAril.jpg",
     quantity: "unlimited"
+)
+
+palantir = grima.items.create!(
+    title: "Palantir of Orthanc",
+    price: 5000,
+    description: "One of the last few functioning Seeing Stones on Middle-earth. Video chat with the other Palantir owners was never so easy. Enjoy your personal chat with Sauron with afternoon tea! Comes with Windows 8.1 and P2P chat software pre-installed. 3G data included in package. Tea not included.",
+    quantity: 1
 )
 
 draught = treebeard.items.create!(
@@ -151,7 +164,7 @@ entry = gollum.items.create!(
 
 rope = galadriel.items.create!(
     title: "Elven Rope",
-    price: 100,
+    price: 1000,
     description: "Handcrafted by an elven master craftsman, this rope stays knotted when you want it to, but undoes itself when you tug it in certain way.",
     image_url: "http://img2.wikia.nocookie.net/__cb20140428205712/lotr/images/f/fb/Tumblr_inline_mlndwhvKLr1qz4rgp.jpg",
     quantity: 1
@@ -228,6 +241,7 @@ house = frodo.items.create!(
     image_url: "http://1.bp.blogspot.com/-3KI5fg3J7eU/UVKA6Hjn14I/AAAAAAAAAsY/ZypHvGe2egg/s1600/BILBO%27+S+HOUSE.jpg",
     quantity: 1
 )
+
 
 
 # Reviews
@@ -331,4 +345,16 @@ gandalf.reviews.create!(
     content: "He have done a great job carrying the Ring of Power. Looking forward to doing a business again.",
     stars: 5,
     item_id: ringbearer.id 
+)
+
+aragorn.reviews.create!(
+    content: "I had a very enjoyable talk with Sauron. He’s an interesting guy except for his unfortunate view on politics. On the downside, the device takes two minutes to boot up completely.",
+    stars: 3,
+    item_id: palantir.id
+)
+
+saruman.reviews.create!(
+    content: "You fool! Who told you to take it off from my tower? That was MY personal belonging!",
+    stars: 1,
+    item_id: palantir.id
 )

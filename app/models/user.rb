@@ -18,6 +18,8 @@ class User < ActiveRecord::Base
       inverse_of: :author
   )
 
+  has_many :carts
+
   attr_reader :password
   
   def self.find_by_credentials(username, password)
@@ -37,6 +39,10 @@ class User < ActiveRecord::Base
   
   def is_password?(password)
     BCrypt::Password.new(self.password_digest).is_password?(password)
+  end
+
+  def cart_count
+    $redis.scard "cart#{id}"
   end
 
   def password=(password)

@@ -23,6 +23,7 @@ class ApplicationController < ActionController::Base
     user = current_user
     user.reset_session_token! 
     session[:session_token] = nil
+    session[:cart] = nil
   end
   
   def require_current_user!

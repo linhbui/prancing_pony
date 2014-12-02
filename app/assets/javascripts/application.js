@@ -37,6 +37,7 @@ $.ItemsSearch = function (el) {
 
 $.ItemsSearch.prototype.handleInput = function (event) {
     if (this.$input.val() == "") {
+        debugger
         this.renderResults([]);
         return;
     }
