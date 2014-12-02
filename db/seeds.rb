@@ -115,7 +115,7 @@ grima = User.create(
     username: "Grima",
     email: "grima@prancingpony.rocks",
     password: "password",
-    filepicker_url: "http://arwen-undomiel.com/images/other/Grima_creepy.jpg"
+    filepicker_url: "http://img1.wikia.nocookie.net/__cb20121011123131/lotr/images/b/b4/Grima_Wormtongue.png"
 )
 # Items
 ring = sauron.items.create!(
@@ -140,6 +140,7 @@ palantir = grima.items.create!(
     title: "Palantir of Orthanc",
     price: 5000,
     description: "One of the last few functioning Seeing Stones on Middle-earth. Video chat with the other Palantir owners was never so easy. Enjoy your personal chat with Sauron with afternoon tea! Comes with Windows 8.1 and P2P chat software pre-installed. 3G data included in package. Tea not included.",
+    image_url: "http://fotos.subefotos.com/e50dc8e07b2f062ef92e84cd32b8c4d1o.jpg",
     quantity: 1
 )
 
