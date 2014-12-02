@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   resource :session, only: [:create, :new, :destroy]    
 
   namespace :api, defaults: { format: :json }  do
-      resources :items
-      resources :reviews
+    resources :items do
+       get "search", on: :collection
+    end
+    resources :reviews
   end
 end

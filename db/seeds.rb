@@ -137,7 +137,7 @@ draught = treebeard.items.create!(
 All organic, non-GMO and growth hormone-free. 
 \n
 *This statement has not been verified by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.",
-    image_url: "http://img2.wikia.nocookie.net/__cb20121201081302/lotr/images/a/a5/Pippin_and_Ent-Draught.png",
+    image_url: "http://images.wikia.com/lotr/images/a/a5/Pippin_and_Ent-Draught.png",
     quantity: "10"
 )
 
@@ -149,12 +149,34 @@ entry = gollum.items.create!(
     quantity: "unlimited",
 )
 
+rope = galadriel.items.create!(
+    title: "Elven Rope",
+    price: 100,
+    description: "Handcrafted by an elven master craftsman, this rope stays knotted when you want it to, but undoes itself when you tug it in certain way.",
+    image_url: "http://img2.wikia.nocookie.net/__cb20140428205712/lotr/images/f/fb/Tumblr_inline_mlndwhvKLr1qz4rgp.jpg",
+    quantity: 1
+)
+
+bodyguard = sam.items.create!(
+    title: "Sam's Bodyguard Service",
+    price: 40,
+    description: "Will follow anywhere to protect the client, even to the mountain of Mordor. Ask today!",
+    image_url: "http://www.crankycritic.com/archive02/papers/lotr2/lotr2_sam-frodo_800.jpg"
+)
+
 bread = galadriel.items.create!(
     title: "Lembas Bread", 
     price: 50,
     description: "The famous elven bread is now back, manufactured with the traditional recipe. One bite should fill a grown man’s stomach. Sold in bulk.",
     image_url: "http://img1.wikia.nocookie.net/__cb20121201075601/lotr/images/1/14/Lembas_bread.png",
     quantity: "unlimited"
+)
+
+ringbearer = frodo.items.create!(
+    title: "Ring-bearer Service",
+    price: 30000,
+    description: "Special courier service for ring. Will carry any kind of ring anywhere on Middle-earth. The price is negotiable.",
+    image_url: "http://writerunboxed.com/wp-content/uploads/2006/04/Frodo20with20ring.jpg"
 )
 
 hair = galadriel.items.create!(
@@ -181,13 +203,6 @@ pipeweed = pippin.items.create!(
     quantity: "unlimited"
 )
 
-rope = galadriel.items.create!(
-    title: "Elven Rope",
-    price: 100,
-    description: "Handcrafted by an elven master craftsman, this rope stays knotted when you want it to, but undoes itself when you tug it in certain way.",
-    image_url: "http://img2.wikia.nocookie.net/__cb20140428205712/lotr/images/f/fb/Tumblr_inline_mlndwhvKLr1qz4rgp.jpg",
-    quantity: 1
-)
 
 gardening = sam.items.create!(
     title: "Sam's Gardening Service",
@@ -196,12 +211,6 @@ gardening = sam.items.create!(
     image_url: "http://media-cache-ak0.pinimg.com/236x/99/f6/8b/99f68b40b290dbfbadb4d3907e1d06e5.jpg"
 )
 
-bodyguard = sam.items.create!(
-    title: "Sam's Bodyguard Service",
-    price: 40,
-    description: "Will follow anywhere to protect the client, even to the mountain of Mordor. Ask today!",
-    image_url: "http://www.crankycritic.com/archive02/papers/lotr2/lotr2_sam-frodo_800.jpg"
-)
 
 light = galadriel.items.create!(
     title: "Light of Earendil",
@@ -220,12 +229,6 @@ house = frodo.items.create!(
     quantity: 1
 )
 
-ringbearer = frodo.items.create!(
-    title: "Ring-bearer Service",
-    price: 30000,
-    description: "Special courier service for ring. Will carry any kind of ring anywhere on Middle-earth. The price is negotiable.",
-    image_url: "http://writerunboxed.com/wp-content/uploads/2006/04/Frodo20with20ring.jpg"
-)
 
 # Reviews
 king.reviews.create!(

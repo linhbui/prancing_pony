@@ -8,6 +8,7 @@ window.PrancingPony = {
       $rootEl: $("div#content")
     });
     Backbone.history.start(); 
+    $('.nav-item-search').itemsSearch();
   }
 };
 

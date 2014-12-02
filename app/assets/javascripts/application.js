@@ -26,3 +26,50 @@
 //= require_tree ./views
 //= require_tree ./routers
 //= require_tree .
+
+
+$.ItemsSearch = function (el) {
+    this.$el = $(el);
+    this.$input = this.$el.find("input");
+    this.$ul = this.$el.find(".nav-items-search-result");
+    this.$input.on("input", this.handleInput.bind(this));
+};
+
+$.ItemsSearch.prototype.handleInput = function (event) {
+    if (this.$input.val() == "") {
+        this.renderResults([]);
+        return;
+    }
+    var search = this.$input.val();
+    console.log(search);
+    $.ajax({
+        url: "/api/items/search",
+        dataType: "json",
+        method: "GET",
+        data: { query: this.$input.val() },
+        success: this.renderResults.bind(this)
+    });
+};
+
+$.ItemsSearch.prototype.renderResults = function (items) {
+    this.$ul.empty();
+
+    for (var i = 0; i < items.length; i++) {
+        var item = items[i];
+
+        var $a = $("<a></a>");
+        $a.text(item.title);
+        $a.attr("href", "#/items/" + item.id);
+
+        var $li = $("<li></li>");
+        $li.append($a);
+
+        this.$ul.append($li);
+    }
+};
+
+$.fn.itemsSearch = function () {
+    return this.each(function () {
+        new $.ItemsSearch(this);
+    });
+};

@@ -23,6 +23,19 @@ class Api::ItemsController < ApplicationController
     render json: {} 
   end
 
+  def search
+    if params[:query].present?
+      @items = Item.where("lower(title) ~ ?", params[:query].downcase)
+    else
+      @item = Item.none
+    end
+
+    respond_to do |format|
+      format.html { render :search }
+      format.json { render :search }
+    end
+  end
+
   private
 
   def item_params

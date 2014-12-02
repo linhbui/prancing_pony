@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /*#content {*/
-    /*width: 600px;*/
+/*width: 600px;*/
 /*}*/
 .item-show-container {
     background-color: white;
@@ -112,17 +112,17 @@
 }
 
 .lower-seller-avatar {
-   display: block;
-   width: 100%;
+    display: block;
+    width: 100%;
 }
 
 .lower-seller-name {
-  margin-top: 8%;
-  display: inline-block;
-  color: grey;
-  font-size: 1.7vw;
-  width: 100%;
-  text-align: center;
+    margin-top: 8%;
+    display: inline-block;
+    color: grey;
+    font-size: 1.7vw;
+    width: 100%;
+    text-align: center;
 }
 
 #item-seller h3 {
@@ -176,4 +176,36 @@
 
 .item-thumbnail {
     display: block;
+}
+
+/*search*/
+.nav-items-search-result li {
+    list-style-type: none;
+    padding-top: 5px;
+}
+
+.nav-items-search-result a {
+    color: #666666;
+}
+
+.nav-items-search-result a:hover {
+    text-decoration: none;
+}
+
+.nav-items-search-result li:hover {
+    background-color: aliceblue;
+    text-decoration: none;
+}
+
+.nav-item-search {
+    position: relative;
+}
+.nav-items-search-result {
+    padding-left: 10px;
+    min-width: 100%;
+    position: absolute;
+    background-color: white;
+    border-bottom: 1px solid #E7E7E7;
+    border-left: 1px solid #E7E7E7;
+    border-right: 1px solid #E7E7E7;
 }

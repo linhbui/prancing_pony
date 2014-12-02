@@ -45,6 +45,7 @@ PrancingPony.Views.ItemsIndex = Backbone.CompositeView.extend({
         this.$el.html(content);
         this.attachSubviews();
         this.masonry();
+        //this.$('.nav-item-search').itemsSearch();
         return this;
     },
     
