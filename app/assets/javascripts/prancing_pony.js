@@ -4,6 +4,8 @@ window.PrancingPony = {
   Views: {},
   Routers: {},
   initialize: function() {
+    this.cart = new PrancingPony.Models.Cart();
+    this.cart.fetch();
     new PrancingPony.Routers.Router({
       $rootEl: $("div#content")
     });

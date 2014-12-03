@@ -1,0 +1,18 @@
+<div class='show-cart'>
+    <%= cart.items().length %> items in your cart
+    <br>
+    <button id="keep-shopping">Keep Shopping</button>>
+    <div class="row">
+        <div class="cart-left col-md-9">
+            <div id="cart-items-list">
+                
+            </div>
+        </div>
+        <div class="cart-right col-md-3">
+           Payment stuffs here 
+           </br>
+        Total
+        <%= cart.totalPrice() %>
+        </div>
+    </div>
+</div>

@@ -1,5 +1,9 @@
 PrancingPony.Views.ItemShow = Backbone.CompositeView.extend({
     template: JST['items/show'],
+    
+    events: {
+        'click button#add-cart-button': 'addItemToCart'
+    },
 
     initialize: function() {
         this.listenTo(this.model, 'sync', this.render);
@@ -26,6 +30,23 @@ PrancingPony.Views.ItemShow = Backbone.CompositeView.extend({
 
     renderReviews: function() {
         this.model.reviews().each(this.addReview.bind(this));
-    }
+    },
 
+    addItemToCart: function(event) {
+        event.preventDefault();
+
+        var $button = $(event.currentTarget);
+        var itemId = $button.data("id");
+        PrancingPony.cart.set("item_id", itemId);
+        PrancingPony.cart.save({}, {
+            success: function() {
+                var num = parseInt($("#cart-num").html()) + 1;
+                $("#cart-num").html(num);
+                Backbone.history.navigate("cart", { trigger: true });
+            },
+            error: function() {
+                console.log(":( :( :( So sad :( ( ")
+            }
+        });
+    }
 })

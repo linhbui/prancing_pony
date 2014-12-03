@@ -18,4 +18,4 @@ PrancingPony.Collections.Items = Backbone.Collection.extend({
     }
 })
 
-PrancingPony.Collections.items = new PrancingPony.Collections.Items
+PrancingPony.Collections.items = new PrancingPony.Collections.Items();

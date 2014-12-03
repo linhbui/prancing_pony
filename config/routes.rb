@@ -8,10 +8,7 @@ Rails.application.routes.draw do
     resources :items do
        get "search", on: :collection
     end
-    resource :cart, only: [:show] do
-      put 'add/:item_id', to: 'carts#add', as: :add_to
-      put 'remove/:item_id', to: 'carts#remove', as: :remove_from
-    end
+    resource :cart, only: [:show, :create, :destroy]
 
     resources :reviews
   end

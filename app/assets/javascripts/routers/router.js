@@ -4,13 +4,23 @@ PrancingPony.Routers.Router = Backbone.Router.extend({
     },
 
     routes: {
-      "": "index",
-      "items/new": "new",
-      "items/:id": "show",
+      "": "itemIndex",
+      "items/new": "itemNew",
+      "items/:id": "itemShow",
+      "cart": "showCart"
       //"items/:id/edit": "edit"
     },
+    
+    showCart:  function() {
+        var items = PrancingPony.cart.items();
+        var showCartView = new PrancingPony.Views.CartShow({
+            model: PrancingPony.cart,
+            collection: items
+        }) 
+        this._swapView(showCartView);
+    },
 
-    index:  function() {
+    itemIndex:  function() {
         PrancingPony.Collections.items.fetch();
         var indexView = new PrancingPony.Views.ItemsIndex({
             collection: PrancingPony.Collections.items
@@ -18,7 +28,7 @@ PrancingPony.Routers.Router = Backbone.Router.extend({
         this._swapView(indexView);
     },
 
-    new: function() {
+    itemNew: function() {
         var newItem = new PrancingPony.Models.Item();
         var newView = new PrancingPony.Views.ItemNew({
             collection: PrancingPony.Collections.items,
@@ -27,7 +37,7 @@ PrancingPony.Routers.Router = Backbone.Router.extend({
         this._swapView(newView);
     },
 
-    show: function(id) {
+    itemShow: function(id) {
         var item = PrancingPony.Collections.items.getOrFetch(id);
         var showView = new PrancingPony.Views.ItemShow({
             model: item
