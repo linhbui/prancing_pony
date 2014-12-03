@@ -35,7 +35,7 @@
     height: 30px;
 }
 
-.cart-left {
+.cart-left.col-md-8 {
     padding-left: 0px;
 }
 
@@ -50,15 +50,19 @@
 .cart-item-img-container {
     width: 170px;
     float: left;
-    padding-top: 10px;
+    height: 150px;
 }
 
 .cart-item-image {
     display: block;
     width:150px;
     margin-left: 0px !important;
+    object-fit: cover;
+    height: 150px;
 }
-
+.price {
+    text-align: right;
+}
 .cart-item-content {
     float: left;
     padding-top: 10px;

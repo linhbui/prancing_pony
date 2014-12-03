@@ -28,14 +28,14 @@
                <div class="col-md-8">
                   Items: 
                </div>
-                <div class="col-md-1 col-md-offset-2">
-                    $<%= cart.totalPrice() %> 
+                <div class="col-md-4 price">
+                    <%= cart.totalPrice() %> silvers
                 </div>
                <div class="col-md-8">
                   Shippings and handlings: 
                </div>
-                <div class="col-md-1 col-md-offset-2">
-                    $0 
+                <div class="col-md-4 price">
+                    0 silvers 
                 </div>
             </div>
 
@@ -43,22 +43,22 @@
                <div class="col-md-8">
                   Total before Tax: 
                </div>
-                <div class="col-md-1 col-md-offset-2">
-                    $<%= cart.totalPrice() %> 
+                <div class="col-md-4 price">
+                    <%= cart.totalPrice() %> silvers 
                 </div>
                <div class="col-md-8">
                    Estimated tax to be collected:
                </div>
-                <div class="col-md-1 col-md-offset-2">
-                    $0 
+                <div class="col-md-4 price">
+                    0 silvers 
                 </div>
             </div>
            <div class="row order-summary-final">
-               <div class="col-md-8">
-                  Total before Tax: 
+               <div class="col-md-5">
+                  Total: 
                </div>
-                <div class="col-md-2 col-md-offset-2">
-                    $<%= cart.totalPrice() %> 
+                <div class="col-md-7 price">
+                    <%= cart.totalPrice() %> silvers
                 </div>
             </div>
         </div>

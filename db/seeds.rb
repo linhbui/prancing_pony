@@ -151,7 +151,7 @@ draught = treebeard.items.create!(
 All organic, non-GMO and growth hormone-free. 
 \n
 *This statement has not been verified by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.",
-    image_url: "http://www.foodthroughthepages.com/wp-content/uploads/2012/11/ent-draught.jpg",
+    image_url: "http://linhbui.me/prancing/ent.jpg",
     quantity: "20"
 )
 
