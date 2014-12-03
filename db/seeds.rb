@@ -139,7 +139,7 @@ sword = elrond.items.create!(
 palantir = grima.items.create!(
     title: "Palantir of Orthanc",
     price: 5000,
-    description: "One of the last few functioning Seeing Stones on Middle-earth. Video chat with the other Palantir owners was never so easy. Enjoy your personal chat with Sauron with afternoon tea! Comes with Windows 8.1 and P2P chat software pre-installed. 3G data included in package. Tea not included.",
+    description: "One of the last few functioning Seeing Stones on Middle-earth. Video chat with the other Palantir owners was never so easy. Enjoy your personal chat with Sauron over afternoon tea! Comes with Windows 8.1 and P2P chat software pre-installed. 3G data included in package. Tea not included.",
     image_url: "http://fotos.subefotos.com/e50dc8e07b2f062ef92e84cd32b8c4d1o.jpg",
     quantity: 1
 )
@@ -313,7 +313,8 @@ gandalf.reviews.create!(
 )
 
 saruman.reviews.create!(
-    content: "Gandalf, your wisdom has decreased because you smoke this. I’ll do you a favor and buy them all for your sake.",
+    content: "Gandalf, your wisdom has decreased since you started to smoke this. I’ll do you a favor and buy them all for your sake.
+",
     stars: 1,
     item_id: pipeweed.id
 )

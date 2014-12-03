@@ -5,7 +5,7 @@ class Api::CartsController < ApplicationController
     cart_item_ids = session[:cart] || []
     
     unless cart_item_ids.empty?
-      @cart_items = cart_item_ids.map { |id| Item.find(id) }.sort
+      @cart_items = cart_item_ids.map { |id| Item.find(id) }
     else
         @cart_items = []
     end

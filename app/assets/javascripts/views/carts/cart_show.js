@@ -3,7 +3,8 @@ PrancingPony.Views.CartShow = Backbone.CompositeView.extend({
     
     events: {
         "click button.delete-cart-item": "deleteCartItem",
-        "click button#keep-shopping": "goBackToIndex"
+        "click button#keep-shopping": "goBackToIndex",
+        "click button#place-order": "placeOrder"
     },
 
     initialize: function () {
@@ -14,6 +15,11 @@ PrancingPony.Views.CartShow = Backbone.CompositeView.extend({
         this.collection.each(function(item){
             this.addItemView(item)
         }.bind(this))
+    },
+
+    placeOrder: function(event) {
+       event.preventDefault();
+       alert("Our algorithms have detected you are a resident of Planet Earth. Currently, our service is not available for this location. We assure you we are lobbying our government really hard to make our service available to you in the near future. Thank you for your understanding.");
     },
 
     goBackToIndex: function(event) {
@@ -66,5 +72,5 @@ PrancingPony.Views.CartShow = Backbone.CompositeView.extend({
                 console.log(":( :( :(");
             }
         });
-    },
+    }
 })

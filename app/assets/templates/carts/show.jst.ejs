@@ -19,10 +19,48 @@
         </div>
 
         <div class="cart-right col-md-4">
-           Payment stuffs here 
-           </br>
-        Total
-        <%= cart.totalPrice() %>
+        <button  class='btn btn-success' id="place-order">
+            Place your order 
+        </button>
+        <div class="order-summary">
+           <h4>Order Summary</h4> 
+           <div class="row order-summary-first">
+               <div class="col-md-8">
+                  Items: 
+               </div>
+                <div class="col-md-1 col-md-offset-2">
+                    $<%= cart.totalPrice() %> 
+                </div>
+               <div class="col-md-8">
+                  Shippings and handlings: 
+               </div>
+                <div class="col-md-1 col-md-offset-2">
+                    $0 
+                </div>
+            </div>
+
+           <div class="row order-summary-first">
+               <div class="col-md-8">
+                  Total before Tax: 
+               </div>
+                <div class="col-md-1 col-md-offset-2">
+                    $<%= cart.totalPrice() %> 
+                </div>
+               <div class="col-md-8">
+                   Estimated tax to be collected:
+               </div>
+                <div class="col-md-1 col-md-offset-2">
+                    $0 
+                </div>
+            </div>
+           <div class="row order-summary-final">
+               <div class="col-md-8">
+                  Total before Tax: 
+               </div>
+                <div class="col-md-2 col-md-offset-2">
+                    $<%= cart.totalPrice() %> 
+                </div>
+            </div>
         </div>
     </div>
 </div>
