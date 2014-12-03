@@ -37,9 +37,9 @@
                     <h4 class='bold'> $<%= item.escape('price').slice(0,-2) %> silvers</h4>
 
                     <ul id='overview'>
-                            <li> Available: <%= item.escape('quantity') %> </li>
+                            <li> Available: <%= item.get('quantity') %> </li>
                             <li> Reviews summary here maybe? </li>
-                            <li>Favorite count too?</li>
+                            <li><%= item.favoritesCount() %> Favorites</li>
                     </ul>
                 </div>
         

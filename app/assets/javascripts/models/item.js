@@ -15,6 +15,10 @@ PrancingPony.Models.Item = Backbone.Model.extend({
         return this._favorites;
     },
 
+    favoritesCount: function() {
+        return this.favorites().length;
+    },
+
     avgStarsStr: function() {
          var x;
          var str = "";
