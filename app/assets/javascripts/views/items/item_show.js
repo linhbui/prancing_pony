@@ -42,6 +42,7 @@ PrancingPony.Views.ItemShow = Backbone.CompositeView.extend({
             success: function() {
                 var num = parseInt($("#cart-num").html()) + 1;
                 $("#cart-num").html(num);
+                PrancingPony.cart.fetch();
                 Backbone.history.navigate("cart", { trigger: true });
             },
             error: function() {

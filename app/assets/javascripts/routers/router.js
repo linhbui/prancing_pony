@@ -12,6 +12,7 @@ PrancingPony.Routers.Router = Backbone.Router.extend({
     },
     
     showCart:  function() {
+        PrancingPony.cart.fetch();
         var items = PrancingPony.cart.items();
         var showCartView = new PrancingPony.Views.CartShow({
             model: PrancingPony.cart,

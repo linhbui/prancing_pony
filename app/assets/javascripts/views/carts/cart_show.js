@@ -46,21 +46,23 @@ PrancingPony.Views.CartShow = Backbone.CompositeView.extend({
     },
     
     deleteCartItem: function(event) {
-        debugger
         event.preventDefault();
         var $button = $(event.currentTarget);
         var itemId = $button.data("id");
         $.ajax({
-          url: "/api/cart",
-          method: "delete",
-          data: { item_id: itemId },
-          success: function (response) {
-           // decrease num on cart 
-            var num = parseInt($(".cart-num").html()) - 1;
-            $("#cart-num").html(num);
-           // remove the cart on view 
-           // take care of by listen to?
-         }
-    });
+            url: "/api/cart",
+            method: "delete",
+            data: { item_id: itemId },
+            success: function (response) {
+                // decrease num on cart 
+                var num = parseInt($(".cart-num").html()) - 1;
+                $("#cart-num").html(num);
+                PrancingPony.cart.fetch();
+                // remove the cart on view 
+            },
+            error: function () {
+                console.log(":( :( :(");
+            }
+        });
     },
 })

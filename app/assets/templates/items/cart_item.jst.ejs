@@ -2,4 +2,4 @@
     <br>
     <%= item.escape('price') %>
     <br>
-    <button class="delete-cart-item">Remove From Cart</button>
+    <button data-id="<%= item.escape('id') %>" class="delete-cart-item">Remove From Cart</button>

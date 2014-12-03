@@ -7,12 +7,16 @@ PrancingPony.Models.Cart = Backbone.Model.extend({
         }
         return this._items;
     },
-    
+
+    count:  function() {
+        return this.items().length;
+    },
+
     totalPrice: function() {
         var sum = 0;
-        var l = this.items.length;
+        var l = this.count();
         for (var i = 0; i < l; i ++) {
-            sum += this.items[i].get('price');
+            sum += parseInt(this.items().models[i].get('price'));
         }
         return sum;
     },
