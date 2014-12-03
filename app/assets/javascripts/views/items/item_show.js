@@ -15,6 +15,8 @@ PrancingPony.Views.ItemShow = Backbone.CompositeView.extend({
             item: this.model
         });
         this.$el.html(content);
+        var num = PrancingPony.cart.count();
+        $("#cart-num").html(num);
         this.renderReviews();
         return this;
     },
@@ -40,9 +42,9 @@ PrancingPony.Views.ItemShow = Backbone.CompositeView.extend({
         PrancingPony.cart.set("item_id", itemId);
         PrancingPony.cart.save({}, {
             success: function() {
-                var num = parseInt($("#cart-num").html()) + 1;
-                $("#cart-num").html(num);
                 PrancingPony.cart.fetch();
+                var num = PrancingPony.cart.count();
+                $("#cart-num").html(num);
                 Backbone.history.navigate("cart", { trigger: true });
             },
             error: function() {

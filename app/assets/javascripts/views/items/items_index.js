@@ -42,6 +42,8 @@ PrancingPony.Views.ItemsIndex = Backbone.CompositeView.extend({
     
     render: function () {
         var content = this.template();
+        var num = PrancingPony.cart.count();
+        $("#cart-num").html(num);
         this.$el.html(content);
         this.attachSubviews();
         this.masonry();

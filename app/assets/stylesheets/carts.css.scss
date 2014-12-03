@@ -1,3 +1,87 @@
 // Place all the styles related to the Carts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.show-cart {
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+#cart-row {
+    border: 1px solid #D9D9D9;
+    border-radius: 7px;
+    margin-top: 30px;
+    width: 980px;
+    margin: 0 auto;
+    background-color: white;
+    overflow: hidden;
+}
+
+.cart-count-top {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cart-count-top.col-md-8 {
+    padding-left: 30px;
+    padding-top: 5px;
+}
+
+#keep-shopping {
+    margin-left: 0px;
+}
+
+#cart-grey {
+    background-color: #EAEAE3;
+    height: 30px;
+}
+
+.cart-left {
+    padding-left: 0px;
+}
+
+.cart-item-container {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #D9D9D9;
+    padding-bottom: 10px;
+}
+
+.cart-item-img-container {
+    width: 170px;
+    float: left;
+    padding-top: 10px;
+}
+
+.cart-item-image {
+    display: block;
+    width:150px;
+    margin-left: 0px !important;
+}
+
+.cart-item-content {
+    float: left;
+    padding-top: 10px;
+    a {
+        color: #0192C0;
+    }
+
+}
+
+.quantity-input {
+    width: 40px;
+}
+
+.cart-item-btn-bottom {
+    background-color: white;
+
+    border: none;
+}
+
+.cart-item-btn-bottom:hover {
+    background-color: aliceblue;
+}
+
+.cart-item-price {
+    padding-top: 10px;
+    margin-bottom: 7px;
+}

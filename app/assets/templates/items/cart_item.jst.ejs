@@ -1,5 +1,30 @@
-    <%= item.escape('title') %>
-    <br>
-    <%= item.escape('price') %>
-    <br>
-    <button data-id="<%= item.escape('id') %>" class="delete-cart-item">Remove From Cart</button>
+<div class='cart-item-container'>
+    <div class='cart-item-img-container'>
+        <a href='/#item/<%= item.escape('id') %>'>
+            <img class='cart-item-image' src='<%= item.escape('image_url') %>'>
+        </a>
+    </div>
+
+    <div class='cart-item-content'>
+        <p>
+            <a href='/#items/<%= item.escape('id') %>'><%= item.escape('title') %></a>
+        </p>
+        <div class="cart-item-quantity"> 
+            Quantity:  
+           <input class='quantity-input' type="number" name="quantity" step="1">
+        </div>
+        <div class='cart-item-price'>
+            Price: <%= item.escape('price') %> silvers
+        </div>
+        <div class='cart-item-seller'>
+            Sold by: <%= item.escape('seller') %>
+        </div>
+        <button style="font-size: 12px; padding-left: 0px;" class='cart-item-btn-bottom delete-cart-item btn' data-id='<%= item.escape('id') %>'>
+            Remove
+        </button>
+        <button style="font-size: 12px; padding-left: 0px;" class='cart-item-btn-bottom btn' data-id='<%= item.escape('id') %>'>
+            Add to Favorite
+        </button>
+    </div>
+</div>
+

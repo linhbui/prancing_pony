@@ -60,7 +60,9 @@
         <a href="#/cart">
             Cart 
             <span class="glyphicon glyphicon-shopping-cart"></span>
-            <span id="cart-num">0<span>
+            <% if current_user %>
+                <span id="cart-num"><span>
+            <%end%>
         </a>
         </li>             
       </ul>
