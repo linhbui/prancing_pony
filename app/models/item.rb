@@ -13,4 +13,6 @@ class Item < ActiveRecord::Base
         foreign_key: "item_id",
         inverse_of: :item
     )
+
+    has_many :favorites
 end

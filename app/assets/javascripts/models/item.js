@@ -8,6 +8,13 @@ PrancingPony.Models.Item = Backbone.Model.extend({
         return this._reviews;
     },
     
+    favorites: function() {
+        if (!this._favorites) {
+            this._favorites = new PrancingPony.Collections.Favorites([], { item: this });
+        }
+        return this._favorites;
+    },
+
     avgStarsStr: function() {
          var x;
          var str = "";
@@ -24,6 +31,11 @@ PrancingPony.Models.Item = Backbone.Model.extend({
         if(payload.reviews) {
             this.reviews().set(payload.reviews, { parse: true });
             delete payload.reviews;
+        }
+
+        if(payload.favorites) {
+            this.favorites().set(payload.favorites, { parse: true });
+            delete payload.favorites;
         }
         return payload;
     }

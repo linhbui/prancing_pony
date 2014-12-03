@@ -8,6 +8,8 @@ PrancingPony.Views.CartShow = Backbone.CompositeView.extend({
     },
 
     initialize: function () {
+        this.listenTo(this.model, "sync", this.render);
+        this.listenTo(this.collection, "sync", this.render);
         this.listenTo(this.collection, "add sync", this.addItemView);
         this.listenTo(this.collection, "sync", this.render);
         this.listenTo(this.collection, "remove", this.removeItemView);

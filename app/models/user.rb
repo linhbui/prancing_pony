@@ -20,6 +20,8 @@ class User < ActiveRecord::Base
 
   has_many :carts
 
+  has_many :favorites
+
   attr_reader :password
   
   def self.find_by_credentials(username, password)

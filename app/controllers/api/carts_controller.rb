@@ -9,7 +9,8 @@ class Api::CartsController < ApplicationController
     else
         @cart_items = []
     end
-    render json: {items: @cart_items}
+    # render json: {items: @cart_items}
+    render :show
   end
 
   def create
