@@ -15,7 +15,6 @@ class Item < ActiveRecord::Base
     )
 
     has_many :favorites
-
-    def self.favorited_by(user)
-    end 
+    has_many :category_items
+    has_many :categories, through: :category_items, source: :category
 end

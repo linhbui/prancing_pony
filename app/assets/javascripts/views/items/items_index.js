@@ -10,9 +10,17 @@ PrancingPony.Views.ItemsIndex = Backbone.CompositeView.extend({
         var $button = $(event.currentTarget);
         var itemId = $button.data("id");
         var item = this.collection.get(itemId);
-        item.destroy();
+        item.destroy({
+            success: function() {
+                console.log("success!");
+            },
+            error: function() {
+                console.log(">_< >_<")
+            }
+        });
     },
     
+
     initialize: function () {
         this.listenTo(this.collection, "add", this.addView);
         this.listenTo(this.collection, "sync", this.render);
