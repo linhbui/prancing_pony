@@ -15,4 +15,7 @@ class Item < ActiveRecord::Base
     )
 
     has_many :favorites
+
+    def self.favorited_by(user)
+    end 
 end

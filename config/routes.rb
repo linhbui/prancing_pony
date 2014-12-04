@@ -11,10 +11,6 @@ Rails.application.routes.draw do
     resource :cart, only: [:show, :create, :destroy]
 
     resources :reviews
-
-    namespace :users do
-        resources :favorites, only: [:index]
-    end
     
     resources :favorites, only: [:index, :show, :create, :destroy]
   end

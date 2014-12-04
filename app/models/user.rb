@@ -22,6 +22,8 @@ class User < ActiveRecord::Base
 
   has_many :favorites
 
+  has_many :favorite_items, through: :favorites, source: :item
+
   attr_reader :password
   
   def self.find_by_credentials(username, password)

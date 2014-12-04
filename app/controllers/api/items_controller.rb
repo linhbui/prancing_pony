@@ -1,6 +1,10 @@
 class Api::ItemsController < ApplicationController
   def index
-    @items = Item.includes(:reviews).all
+      if params[:favorite]
+          @items = current_user.favorite_items.includes(:reviews)
+      else
+        @items = Item.includes(:reviews).all
+      end
   end
 
   def show

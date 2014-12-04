@@ -7,7 +7,8 @@ PrancingPony.Routers.Router = Backbone.Router.extend({
       "": "itemIndex",
       "items/new": "itemNew",
       "items/:id": "itemShow",
-      "cart": "showCart"
+      "cart": "showCart",
+      "favorites": "showFavorites"
       //"items/:id/edit": "edit"
     },
     
@@ -19,6 +20,14 @@ PrancingPony.Routers.Router = Backbone.Router.extend({
             collection: items
         }) 
         this._swapView(showCartView);
+    },
+
+    showFavorites:  function() {
+        PrancingPony.Collections.items.fetch({ data: { favorite: true } });
+        var indexView = new PrancingPony.Views.ItemsIndex({
+            collection: PrancingPony.Collections.items
+        });
+        this._swapView(indexView);
     },
 
     itemIndex:  function() {
