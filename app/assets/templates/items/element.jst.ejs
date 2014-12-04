@@ -4,23 +4,26 @@
             <a href="#/items/<%= item.id %>"><img class='item-index-image' src='<%= item.escape("image_url") %>' style="object-fit:cover; height:250px"></a>
             <img class='item-seller-avatar img-circle' src="<%= item.escape("seller_image_url") %>" >
         </div>
-      <div class="caption">
-          <h3><%= item.escape("title")%></h3>
-          <p><%= item.avgStarsStr() %></p>
-          <h5>Price: <%= item.escape("price").slice(0,-2) %> silvers</h5>
-          <p><%= item.escape("description").slice(0,100) %>... <a href="#/items/<%= item.id %>">Read more</a></p>
-          <p>Sold by <%= item.escape("seller") %> </p>
-          <p>
-          <a href="#/items/<%= item.id %>" class="btn btn-default" id="button-explore" role="button">
-               Explore
-           </a> 
-           <a href="#" class="btn btn-default" role="button">
-               <span data-item-id="<%= item.escape('id') %>" class="add-favorite glyphicon glyphicon-heart"></span>
-           </a>
-           <a href="#" class="btn btn-default" role="button">
-               <span data-item-id="<%= item.escape('id') %>" class="glyphicon glyphicon-shopping-cart"></span>
-           </a>
-           </p>
-      </div>
+        <div class="caption">
+            <h3><%= item.escape("title")%></h3>
+            <p><%= item.avgStarsStr() %></p>
+            <h5>Price: <%= item.escape("price").slice(0,-2) %> silvers</h5>
+            <p><%= item.escape("description").slice(0,100) %>... <a href="#/items/<%= item.id %>">Read more</a></p>
+            <div data-item-id="<%= item.escape('id') %>">
+                <p>Sold by <%= item.escape("seller") %> </p>
+                <a href="#/items/<%= item.id %>" class="btn btn-default" id="button-explore" role="button">
+                    Explore
+                </a> 
+                <div class='element-favorite-button'>
+                    <% if (item.favorite().isNew()) {%> 
+                    <button data-item-id='<%= item.escape("id") %>' class="btn btn-default add-favorite glyphicon glyphicon-heart">
+                    </button>
+                    <% } else { %>
+                    <button data-favorite-id='<%= item.escape("favorited_id") %>' class="btn btn-default remove-favorite glyphicon glyphicon-heart"></button>
+                    <% } %>
+                </div>
+                <button data-item-id="<%= item.escape('id') %>" class="glyphicon glyphicon-shopping-cart btn btn-default"></button>
+            </div>
+        </div>
     </div>
 </div>

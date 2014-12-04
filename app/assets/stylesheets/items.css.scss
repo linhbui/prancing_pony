@@ -210,6 +210,17 @@
     border-right: 1px solid #E7E7E7;
 }
 
-.remove-favorite {
+.btn.btn-default.remove-favorite {
     color: red;
+}
+
+#button-explore {
+    float: left;
+    margin-top: 1px;
+    margin-right: 5px;
+}
+
+.element-favorite-button {
+    float: left;
+    margin-right: 5px;
 }

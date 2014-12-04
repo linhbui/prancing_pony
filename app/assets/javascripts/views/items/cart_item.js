@@ -8,7 +8,7 @@ PrancingPony.Views.CartItemView = Backbone.View.extend({
     setQuantity: function() {
         var input = this.$el.find('input.quantity-input');
         var quantity = input.val();
-        this.model.set("quantity", quantity);
+        this.model.set("cart-quantity", quantity);
     },
 
     attributes: function() {

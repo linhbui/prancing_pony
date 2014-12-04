@@ -22,10 +22,8 @@ PrancingPony.Views.ItemElement = Backbone.View.extend({
 
     removeFavorite:  function() {
         event.preventDefault();
-        var $button = $(event.currentTarget);
-        var itemId = $button.data("item-id");
-        var favorite = PrancingPony.favorites.getOrFetch(itemId);
-        //custom AJAX request again?
+        var $button = this.$el.find('button.remove-favorite'); 
+        var favorite = this.model.favorite();
         favorite.destroy({
             success: function() {
                 $button.removeClass('remove-favorite');
@@ -40,13 +38,13 @@ PrancingPony.Views.ItemElement = Backbone.View.extend({
 
     addFavorite:  function(event) {
         event.preventDefault();
-        var $button = $(event.currentTarget);
-        var itemId = $button.data("item-id");
-        var favorite = new PrancingPony.Models.Favorite();
-        favorite.set("item_id", itemId);
+        var $button = this.$el.find('button.add-favorite'); 
+        var favorite = this.model.favorite();
         favorite.save({}, {
             success: function() {
-                this.render();
+                $button.addClass('remove-favorite');
+                $button.removeClass('add-favorite')
+                console.log("success!");
             },
             error: function() {
                 console.log(":( so sad :( ")

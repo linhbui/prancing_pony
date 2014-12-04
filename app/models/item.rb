@@ -17,4 +17,9 @@ class Item < ActiveRecord::Base
     has_many :favorites
     has_many :category_items
     has_many :categories, through: :category_items, source: :category
+
+    def favorited_by_user(user)
+       favorite = self.favorites.select { |favorite| favorite.user_id == user.id }.first
+       favorite ? favorite.id : nil
+    end
 end

@@ -18,7 +18,6 @@ class Api::FavoritesController < ApplicationController
   end
   
   def destroy
-      fail
     favorite = Favorite.find(params[:id])
     favorite.destroy
     render json: {} 

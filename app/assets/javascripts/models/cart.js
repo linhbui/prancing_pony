@@ -18,7 +18,7 @@ PrancingPony.Models.Cart = Backbone.Model.extend({
         l = this.count();
         for (var i = 0; i < l; i ++) {
             price = parseInt(this.items().models[i].get('price'))
-            quantity = parseInt(this.items().models[i].get('quantity'))
+            quantity = parseInt(this.items().models[i].get('cart-quantity'))
             sum += (price * quantity);
         }
         // add quantity on the calculation

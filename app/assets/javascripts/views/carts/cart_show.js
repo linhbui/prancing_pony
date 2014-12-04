@@ -69,10 +69,6 @@ PrancingPony.Views.CartShow = Backbone.CompositeView.extend({
                 PrancingPony.cart.fetch();
                 var num = PrancingPony.cart.count();
                 $("#cart-num").html(num);
-                // Reset quantity field
-                item = PrancingPony.items.getOrFetch(itemId);
-                item.set("quantity", "1");
-                // remove the cart on view 
             },
             error: function () {
                 console.log(":( :( :(");
