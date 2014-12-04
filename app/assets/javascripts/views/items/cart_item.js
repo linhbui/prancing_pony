@@ -1,6 +1,16 @@
 PrancingPony.Views.CartItemView = Backbone.View.extend({
     template: JST["items/cart_item"],
     
+    events: {
+        "change input.quantity-input": 'setQuantity'
+    },
+
+    setQuantity: function() {
+        var input = $('input.quantity-input');
+        var quantity = input.val();
+        this.model.set("quantity", quantity);
+    },
+
     attributes: function() {
         return {
             'data-item-id': this.model.id

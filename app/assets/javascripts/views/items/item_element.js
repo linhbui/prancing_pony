@@ -5,7 +5,6 @@ PrancingPony.Views.ItemElement = Backbone.View.extend({
         "click .add-favorite": "addFavorite",
         "click .remove-favorite": "removeFavorite"
     },
-
     
     attributes: function() {
         return {
@@ -47,8 +46,7 @@ PrancingPony.Views.ItemElement = Backbone.View.extend({
         favorite.set("item_id", itemId);
         favorite.save({}, {
             success: function() {
-                $button.removeClass('add-favorite');
-                $button.addClass('remove-favorite');
+                this.render();
             },
             error: function() {
                 console.log(":( so sad :( ")

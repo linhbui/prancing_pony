@@ -3,6 +3,7 @@ json.extract! item, :id, :title, :price, :description, :image_url, :seller_id, :
 json.seller item.seller.username
 json.seller_image_url item.seller.filepicker_url
 
+# send favorite id
 json.reviews do
   json.array! item.reviews do |review|
     json.extract! review, :id, :content, :stars, :item_id, :author_id, :created_at, :updated_at

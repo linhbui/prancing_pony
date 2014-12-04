@@ -13,11 +13,16 @@ PrancingPony.Models.Cart = Backbone.Model.extend({
     },
 
     totalPrice: function() {
-        var sum = 0;
-        var l = this.count();
+        var sum, l, price, quantity;
+        sum = 0;
+        l = this.count();
         for (var i = 0; i < l; i ++) {
-            sum += parseInt(this.items().models[i].get('price'));
+            price = parseInt(this.items().models[i].get('price'))
+            quantity = parseInt(this.items().models[i].get('quantity'))
+            sum += (price * quantity);
         }
+        // add quantity on the calculation
+        // in element view listen to the change,
         return sum;
     },
     
