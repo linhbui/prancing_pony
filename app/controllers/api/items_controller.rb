@@ -1,11 +1,15 @@
 class Api::ItemsController < ApplicationController
-  def index
-      if params[:favorite]
-          @items = current_user.favorite_items.includes(:reviews)
-      else
-        @items = Item.includes(:reviews).all
-      end
-  end
+    def index
+        if params[:favorite]
+            @items = current_user.favorite_items.includes(:reviews)
+        #else if params[:category]
+            #query = URI.unescape(params[:category])
+            #category = Category.find_by(tagname: query)
+            #@items = category.items.includes(:reviews)
+        else 
+            @items = Item.includes(:reviews).all
+        end
+    end
 
   def show
     @item = Item.includes(:reviews).find(params[:id]) 

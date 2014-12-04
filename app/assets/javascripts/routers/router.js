@@ -8,7 +8,9 @@ PrancingPony.Routers.Router = Backbone.Router.extend({
       "items/new": "itemNew",
       "items/:id": "itemShow",
       "cart": "showCart",
-      "favorites": "showFavorites"
+      "favorites": "showFavorites",
+      "category?q=:tagName": "showCategoryItems", 
+      "categories/:id": "showCategoryItems"
       //"items/:id/edit": "edit"
     },
     
@@ -23,12 +25,29 @@ PrancingPony.Routers.Router = Backbone.Router.extend({
     },
 
     showFavorites:  function() {
-        PrancingPony.Collections.items.fetch({ data: { favorite: true } });
+        var items = new PrancingPony.Collections.Items();
+        items.fetch({ data: { favorite: true } });
+        //PrancingPony.Collections.items.fetch({ data: { favorite: true } });
         var indexView = new PrancingPony.Views.ItemsIndex({
-            collection: PrancingPony.Collections.items
+            //collection: PrancingPony.Collections.items
+            collection: items
         });
         this._swapView(indexView);
     },
+
+    showCategoryItems: function(id) {
+        
+    },
+    //showCategoryItems: function(queryStr) {
+        //var query = decodeURIComponent(queryStr);
+        //var items = new PrancingPony.Collections.items();
+        //items.fetch({ data: {category: encodeURIComponent(query)} });
+
+        //var showCategoryView = new PrancingPony.Views.ItemsIndex({ 
+            //collection: items 
+        //});
+        //this._swapView(showCategoryView);
+    //},
 
     itemIndex:  function() {
         PrancingPony.Collections.items.fetch();
