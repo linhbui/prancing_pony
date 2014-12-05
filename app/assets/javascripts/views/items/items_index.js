@@ -84,7 +84,6 @@ deleteItem: function(event){
     },
 
     render: function () {
-        debugger
         var content = this.template();
         var num = PrancingPony.cart.count();
         $("#cart-num").html(num);

@@ -15,7 +15,8 @@ PrancingPony.Views.CategoryAll = Backbone.CompositeView.extend({
 
     render: function() {
         var content = this.template({
-            items: this.collection
+            items: this.collection,
+            category: PrancingPony.category 
         });
         this.$el.html(content);
         this.attachSubviews();

@@ -37,17 +37,14 @@ PrancingPony.Routers.Router = Backbone.Router.extend({
         var items = new PrancingPony.Collections.Items();
         items.fetch({ data: { category: id } });
         var indexView = new PrancingPony.Views.CategoryAll({
-            collection: items
+            collection: items,
+            model: PrancingPony.category
         });
         this._swapView(indexView);
     },
 
     itemIndex:  function() {
         PrancingPony.Collections.items.fetch();
-        //PrancingPony.Collections.items.fetch({
-            //remove: false,
-            //data: { page: 5 }
-        //});
         var indexView = new PrancingPony.Views.ItemsAll({
             collection: PrancingPony.Collections.items
         });

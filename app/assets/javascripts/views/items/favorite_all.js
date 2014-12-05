@@ -8,14 +8,15 @@ PrancingPony.Views.FavoriteAll = Backbone.CompositeView.extend({
 
     addIndexView: function(items) {
         var indexView = new PrancingPony.Views.ItemsIndex({
-            collection: items
+            collection: items,
+            model: this.model
         });
         this.addSubview("div.index-view", indexView);
     },
 
     render: function() {
         var content = this.template({
-            items: this.collection
+            items: this.collection,
         });
         this.$el.html(content);
         this.attachSubviews();
