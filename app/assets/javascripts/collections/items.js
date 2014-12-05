@@ -3,6 +3,12 @@ PrancingPony.Collections.Items = Backbone.Collection.extend({
 
     url: '/api/items',
 
+    //parse: function(response) {
+        //this.page = response.page;
+        //this.total_pages = response.total_pages;
+        //return response.models;
+    //},
+
     getOrFetch: function (id) {
         var model = this.get(id);
         var models = this;

@@ -26,6 +26,7 @@ PrancingPony.Routers.Router = Backbone.Router.extend({
     showFavorites:  function() {
         var items = new PrancingPony.Collections.Items();
         items.fetch({ data: { favorite: true } });
+        items.fetch({ data: { favorite: true } });
         var indexView = new PrancingPony.Views.FavoriteAll({
             collection: items
         });
@@ -43,6 +44,10 @@ PrancingPony.Routers.Router = Backbone.Router.extend({
 
     itemIndex:  function() {
         PrancingPony.Collections.items.fetch();
+        //PrancingPony.Collections.items.fetch({
+        //    remove: false,
+        //    data: { page: 5 }
+        //});
         var indexView = new PrancingPony.Views.ItemsAll({
             collection: PrancingPony.Collections.items
         });

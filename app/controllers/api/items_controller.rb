@@ -8,6 +8,8 @@ class Api::ItemsController < ApplicationController
         else 
             @items = Item.includes(:reviews).all
         end
+        #@items.page(params[:page]).per(6)
+        #@items = Kaminari.paginate_array(Item.all).page(params[:page])
     end
 
   def show
