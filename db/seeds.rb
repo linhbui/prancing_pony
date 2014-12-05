@@ -402,7 +402,7 @@ CategoryItem.create!(
 )
 
 CategoryItem.create!(
-   category_id: hobbits.id,
+   category_id: elves.id,
    item_id: ring.id
 )
 
