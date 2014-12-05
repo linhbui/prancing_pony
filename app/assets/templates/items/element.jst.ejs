@@ -1,5 +1,5 @@
 <div class="item-thumbnail col-md-4">
-    <div class="thumbnail">
+    <div class="thumbnail grow">
         <div class="item-images">
             <a href="#/items/<%= item.id %>"><img class='item-index-image' src='<%= item.escape("image_url") %>' style="object-fit:cover; height:250px"></a>
             <img class='item-seller-avatar img-circle' src="<%= item.escape("seller_image_url") %>" >
@@ -11,7 +11,7 @@
             <p><%= item.escape("description").slice(0,100) %>... <a href="#/items/<%= item.id %>">Read more</a></p>
             <div data-item-id="<%= item.escape('id') %>">
                 <p>Sold by <%= item.escape("seller") %> </p>
-                <a href="#/items/<%= item.id %>" class="btn btn-default" id="button-explore" role="button">
+                <a href="#/items/<%= item.id %>" class="btn btn-default button-explore" role="button">
                     Explore
                 </a> 
                 <div class='element-favorite-button'>
@@ -22,7 +22,7 @@
                     <button data-favorite-id='<%= item.escape("favorited_id") %>' class="btn btn-default remove-favorite glyphicon glyphicon-heart"></button>
                     <% } %>
                 </div>
-                <button data-item-id="<%= item.escape('id') %>" class="glyphicon glyphicon-shopping-cart btn btn-default"></button>
+                <button data-item-id="<%= item.escape('id') %>" class="glyphicon glyphicon-shopping-cart push btn btn-default"></button>
             </div>
         </div>
     </div>

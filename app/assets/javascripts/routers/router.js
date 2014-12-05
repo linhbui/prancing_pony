@@ -36,7 +36,7 @@ PrancingPony.Routers.Router = Backbone.Router.extend({
     showCategoryItems: function(id) {
         var items = new PrancingPony.Collections.Items();
         items.fetch({ data: { category: id } });
-        var indexView = new PrancingPony.Views.ItemsIndex({
+        var indexView = new PrancingPony.Views.CategoryAll({
             collection: items
         });
         this._swapView(indexView);
@@ -45,8 +45,8 @@ PrancingPony.Routers.Router = Backbone.Router.extend({
     itemIndex:  function() {
         PrancingPony.Collections.items.fetch();
         //PrancingPony.Collections.items.fetch({
-        //    remove: false,
-        //    data: { page: 5 }
+            //remove: false,
+            //data: { page: 5 }
         //});
         var indexView = new PrancingPony.Views.ItemsAll({
             collection: PrancingPony.Collections.items

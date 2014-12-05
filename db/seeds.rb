@@ -373,10 +373,26 @@ Favorite.create!(
 )
 
 # Add Category
-magical_items = Category.create!(tagname: "Magical Items") 
-services = Category.create!(tagname: "Services")
-elves = Category.create!(tagname: "From Elves")
-hobbits = Category.create!(tagname: "From Hobbits")
+magical_items = Category.create!(
+    tagname: "Magical Items",
+    description: "You can find here all the treasures of Middle-earth from the coveted Hair of Galadriel to the Ring of Power itself. All at reasonable price."
+) 
+
+services = Category.create!(
+    tagname: "Services",
+    description: "Our professionals take even the most dangerous task*.\n *PrancingPony is not responsible to the quality of the service."
+)
+
+elves = Category.create!(
+    tagname: "From Elves",
+    description: "Handcrafted by the masters of masters, the quality of our items are guaranteed."
+)
+
+hobbits = Category.create!(
+    tagname: "From Hobbits",
+    description: "Happy-go-lucky hobbits are your best choice of companions."
+)
+
 others = Category.create!(tagname: "Others")
 
 # Add CategoryItems

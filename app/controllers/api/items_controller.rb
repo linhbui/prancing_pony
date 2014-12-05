@@ -3,13 +3,14 @@ class Api::ItemsController < ApplicationController
         if params[:favorite]
             @items = current_user.favorite_items.includes(:reviews)
         elsif params[:category]
-            category = Category.find(params[:category])
-            @items = category.items.includes(:reviews)
+            @category = Category.find(params[:category])
+            @items = @category.items.includes(:reviews)
         else 
             @items = Item.includes(:reviews).all
         end
-        #@items.page(params[:page]).per(6)
+        @items = @items.page(params[:page]).per(3)
         #@items = Kaminari.paginate_array(Item.all).page(params[:page])
+        render :index
     end
 
   def show

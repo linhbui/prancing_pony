@@ -4,7 +4,9 @@ class SessionsController < ApplicationController
   end
 
   def show
-      render json: current_user
+      @current_user = current_user
+      #render json: current_user
+      render 'show.json.jbuilder'
   end
 
   def create
