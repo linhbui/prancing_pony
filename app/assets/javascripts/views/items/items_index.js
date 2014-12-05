@@ -32,48 +32,12 @@ PrancingPony.Views.ItemsIndex = Backbone.CompositeView.extend({
             this.addView(item)
         }.bind(this))
     },
-
-    //removeFavorite:  function() {
-        //event.preventDefault();
-        //var $button = $(event.currentTarget); 
-        //var itemId = $button.data("favorite-id");
-        //var favorite = PrancingPony.favorites.getOrFetch(itemId);
-        ////custom AJAX request again?
-        //favorite.destroy({
-            //success: function() {
-                //console.log("hey success!!!!")
-            //},
-            //error: function() {
-                //console.log(":( so sad :( ")
-            //}
-        //});
-    //},
-
-    //addFavorite:  function(event) {
-        //// keep view in original position
-        //var that = this;
-        //event.preventDefault();
-        //var $button = $(event.currentTarget); 
-        //var itemId = $button.data("item-id");
-        //var item = this.collection.get(itemId);
-        //var favorite = item.favorite();
-        //favorite.set("item_id", itemId);
-        //favorite.save({}, {
-            //success: function() {
-                //console.log("success!");
-                //that.render(); 
-            //},
-            //error: function() {
-                //console.log(":( so sad :( ")
-            //}
-        //});
-    //},
     
     addView: function(model){
         var itemElementView = new PrancingPony.Views.ItemElement({
             model: model
         });
-        this.addSubview("div.list-items", itemElementView)
+        this.addSubview("div.list-items", itemElementView);
     },
     
     removeView: function(model){

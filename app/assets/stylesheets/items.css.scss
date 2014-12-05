@@ -6,8 +6,8 @@
 /*}*/
 .item-show-container {
     background-color: white;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 150px;
+    margin-right: 150px;
     padding-left: 25px;
     padding-right: 25px;
     margin-bottom: 28px;
@@ -223,4 +223,8 @@
 .element-favorite-button {
     float: left;
     margin-right: 5px;
+}
+
+.index-view {
+    overflow: hidden
 }

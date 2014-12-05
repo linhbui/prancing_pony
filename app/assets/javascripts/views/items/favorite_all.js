@@ -1,5 +1,5 @@
-PrancingPony.Views.ItemsAll = Backbone.CompositeView.extend({
-    template: JST['items/all'],
+PrancingPony.Views.FavoriteAll = Backbone.CompositeView.extend({
+    template: JST['items/favorite'],
 
     initialize:  function() {
         var items = this.collection;

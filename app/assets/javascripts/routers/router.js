@@ -26,7 +26,7 @@ PrancingPony.Routers.Router = Backbone.Router.extend({
     showFavorites:  function() {
         var items = new PrancingPony.Collections.Items();
         items.fetch({ data: { favorite: true } });
-        var indexView = new PrancingPony.Views.ItemsIndex({
+        var indexView = new PrancingPony.Views.FavoriteAll({
             collection: items
         });
         this._swapView(indexView);
@@ -43,7 +43,7 @@ PrancingPony.Routers.Router = Backbone.Router.extend({
 
     itemIndex:  function() {
         PrancingPony.Collections.items.fetch();
-        var indexView = new PrancingPony.Views.ItemsIndex({
+        var indexView = new PrancingPony.Views.ItemsAll({
             collection: PrancingPony.Collections.items
         });
         this._swapView(indexView);
