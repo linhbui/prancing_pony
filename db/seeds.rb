@@ -11,7 +11,7 @@ arwen = User.create(
     username: "Arwen", 
     email: "arwen@prancingpony.rocks", 
     password: 'password',
-    filepicker_url: "http://arwen-undomiel.com/images/arwen/Arwen_RotK_3.jpg"
+    filepicker_url: "http://img3.wikia.nocookie.net/__cb20140329102507/seigneur-des-anneaux/fr/images/f/f9/Arwen2.jpg"
 )
 
 king = User.create(

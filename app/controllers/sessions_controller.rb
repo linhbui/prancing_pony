@@ -3,6 +3,10 @@ class SessionsController < ApplicationController
     render :new
   end
 
+  def show
+      render json: current_user
+  end
+
   def create
     @user = User.find_by_credentials(params[:user][:username], params[:user][:password])
     if @user.nil?
