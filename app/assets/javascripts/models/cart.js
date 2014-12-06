@@ -3,7 +3,7 @@ PrancingPony.Models.Cart = Backbone.Model.extend({
     
     items: function() {
         if (!this._items) {
-           this._items = new PrancingPony.Collections.Items(); //with or without that square bracket thing here?! 
+           this._items = new PrancingPony.Collections.Items();
         }
         return this._items;
     },
@@ -21,8 +21,6 @@ PrancingPony.Models.Cart = Backbone.Model.extend({
             quantity = parseInt(this.items().models[i].get('cart-quantity'))
             sum += (price * quantity);
         }
-        // add quantity on the calculation
-        // in element view listen to the change,
         return sum;
     },
     

@@ -7,5 +7,5 @@ class Cart < ActiveRecord::Base
         foreign_key: "cart_id"
     )
 
-    has_many :carts, through: :cart_itmes, source: :cart
+    has_many :items, through: :cart_items, source: :cart
 end

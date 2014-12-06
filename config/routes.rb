@@ -13,7 +13,5 @@ Rails.application.routes.draw do
     resources :reviews
     
     resources :favorites, only: [:index, :show, :create, :destroy]
-
-    resource :session, only: [:show]
   end
 end

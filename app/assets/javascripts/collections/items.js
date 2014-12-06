@@ -4,10 +4,14 @@ PrancingPony.Collections.Items = Backbone.Collection.extend({
     url: '/api/items',
 
     parse: function(response) {
-        this.page = parseInt(response.page);
-        this.total_pages = parseInt(response.total_pages);
-        PrancingPony.category = response.category
-        return response.models;
+        if (response.models) {
+            this.page = parseInt(response.page);
+            this.total_pages = parseInt(response.total_pages);
+            PrancingPony.category = response.category
+            return response.models;
+        } else {
+            return response;
+        }
     },
 
     getOrFetch: function (id) {
