@@ -83,7 +83,7 @@ deleteItem: function(event){
         }
     },
 
-    render: function () {
+   render: function () {
         var content = this.template();
         var num = PrancingPony.cart.count();
         $("#cart-num").html(num);

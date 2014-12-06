@@ -4,6 +4,7 @@ PrancingPony.Views.CategoryAll = Backbone.CompositeView.extend({
     initialize:  function() {
         var items = this.collection;
         this.addIndexView(items);
+        this.listenTo(this.collection, 'sync', this.updateCategory);
     },
 
     addIndexView: function(items) {
@@ -21,6 +22,11 @@ PrancingPony.Views.CategoryAll = Backbone.CompositeView.extend({
         this.$el.html(content);
         this.attachSubviews();
         return this;
-    }
+    },
+
+    updateCategory: function () {
+       this.$('h2#category-tagname').html(PrancingPony.category.tagname);
+       this.$('p#category-description').html(PrancingPony.category.description);
+    },
 
 });
