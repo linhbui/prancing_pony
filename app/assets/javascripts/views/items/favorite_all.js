@@ -1,7 +1,8 @@
 PrancingPony.Views.FavoriteAll = Backbone.CompositeView.extend({
     template: JST['items/favorite'],
 
-    initialize:  function() {
+    initialize:  function(options) {
+        this.favorite = options.favorite;
         var items = this.collection;
         this.addIndexView(items);
     },
@@ -9,7 +10,7 @@ PrancingPony.Views.FavoriteAll = Backbone.CompositeView.extend({
     addIndexView: function(items) {
         var indexView = new PrancingPony.Views.ItemsIndex({
             collection: items,
-            model: this.model
+            favorite: this.favorite
         });
         this.addSubview("div.index-view", indexView);
     },

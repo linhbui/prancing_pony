@@ -11,7 +11,7 @@ PrancingPony.Views.CategoryAll = Backbone.CompositeView.extend({
     addIndexView: function(items) {
         var indexView = new PrancingPony.Views.ItemsIndex({
             collection: items,
-            model: this.category_id
+            category_id: this.category_id
         });
         this.addSubview("div.index-view", indexView);
     },

@@ -27,7 +27,8 @@ PrancingPony.Routers.Router = Backbone.Router.extend({
         var items = new PrancingPony.Collections.Items();
         items.fetch({ data: { favorite: true } });
         var indexView = new PrancingPony.Views.FavoriteAll({
-            collection: items
+            collection: items,
+            favorite: true,
         });
         this._swapView(indexView);
     },

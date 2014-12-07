@@ -3,8 +3,6 @@ PrancingPony.Views.ItemsIndex = Backbone.CompositeView.extend({
 
     events: {
         "click button.delete-item": "deleteItem"
-        //"click .add-favorite": "addFavorite",
-        //"click .remove-favorite": "removeFavorite"
     },
 
     deleteItem: function(event){
@@ -23,7 +21,9 @@ PrancingPony.Views.ItemsIndex = Backbone.CompositeView.extend({
     },
 
 
-    initialize: function () {
+    initialize: function (options) {
+        this.favorite = options.favorite;
+        this.category_id = options.category_id;
         this.listenTo(this.collection, "add", this.addView);
         this.listenTo(this.collection, "sync", this.render);
         this.listenTo(this.collection, "remove", this.removeView);
@@ -37,8 +37,7 @@ PrancingPony.Views.ItemsIndex = Backbone.CompositeView.extend({
             this.addView(item)
         }.bind(this))
     },
-// search service, when string empty, trigger search with null
-// change filter collection, when receive null search items, put everything back in the set
+
     filterCollection: function(searchResultItems) {
         var filteredItems = _(this.allItems).filter(function (item) {
             return _.chain(searchResultItems).pluck("id").contains(item.id).value();
@@ -84,7 +83,11 @@ PrancingPony.Views.ItemsIndex = Backbone.CompositeView.extend({
                 self.fetching = true;
                 self.stopListening(self.collection, 'sync');
                 self.collection.fetch({
-                    data: { page: self.collection.page + 1, category: this.model },
+                    data: { 
+                        page: self.collection.page + 1, 
+                        category: this.category_id,
+                        favorite: this.favorite
+                    },
                     remove: false,
                     wait: true,
                     success: function () {

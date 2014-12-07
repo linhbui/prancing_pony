@@ -36,7 +36,7 @@ class Api::ItemsController < ApplicationController
     if params[:query].present?
       @items = Item.where("lower(title) ~ ?", params[:query].downcase)
     else
-      @item = Item.none
+      @items = Item.all
     end
 
     respond_to do |format|

@@ -39,10 +39,10 @@ $.ItemsSearch = function (el) {
 };
 
 $.ItemsSearch.prototype.handleInput = function (event) {
-    if (this.$input.val() == "") {
-        this.renderResults([]);
-        return;
-    }
+    //if (this.$input.val() == "") {
+        //this.renderResults([]);
+        //return;
+    //}
     var search = this.$input.val();
     console.log(search);
     $.ajax({
@@ -57,18 +57,18 @@ $.ItemsSearch.prototype.handleInput = function (event) {
 $.ItemsSearch.prototype.renderResults = function (items) {
     this.$ul.empty();
 
-    for (var i = 0; i < items.length; i++) {
-        var item = items[i];
+    //for (var i = 0; i < items.length; i++) {
+        //var item = items[i];
 
-        var $a = $("<a></a>");
-        $a.text(item.title);
-        $a.attr("href", "#/items/" + item.id);
+        //var $a = $("<a></a>");
+        //$a.text(item.title);
+        //$a.attr("href", "#/items/" + item.id);
 
-        var $li = $("<li></li>");
-        $li.append($a);
+        //var $li = $("<li></li>");
+        //$li.append($a);
 
-        this.$ul.append($li);
-    }
+        //this.$ul.append($li);
+    //}
 
     searchService.trigger("search", items);
 };
