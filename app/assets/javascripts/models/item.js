@@ -29,9 +29,7 @@ PrancingPony.Models.Item = Backbone.Model.extend({
     favoritesCount: function() {
         return this.favorites().length;
     },
-// favorite, has a new favorites
-// parse, pass in the id of the favorite
-// template, check is new.
+
     avgStarsStr: function() {
          var x;
          var str = "";

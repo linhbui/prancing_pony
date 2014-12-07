@@ -27,6 +27,9 @@
 //= require_tree ./routers
 //= require_tree .
 
+window.searchService = {};
+
+_.extend(searchService, Backbone.Events);
 
 $.ItemsSearch = function (el) {
     this.$el = $(el);
@@ -37,7 +40,6 @@ $.ItemsSearch = function (el) {
 
 $.ItemsSearch.prototype.handleInput = function (event) {
     if (this.$input.val() == "") {
-        debugger
         this.renderResults([]);
         return;
     }
@@ -67,6 +69,8 @@ $.ItemsSearch.prototype.renderResults = function (items) {
 
         this.$ul.append($li);
     }
+
+    searchService.trigger("search", items);
 };
 
 $.fn.itemsSearch = function () {

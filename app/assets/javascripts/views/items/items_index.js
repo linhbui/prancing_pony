@@ -1,26 +1,26 @@
 PrancingPony.Views.ItemsIndex = Backbone.CompositeView.extend({
     template: JST['items/index'],
 
-events: {
-    "click button.delete-item": "deleteItem"
-    //"click .add-favorite": "addFavorite",
-    //"click .remove-favorite": "removeFavorite"
-},
+    events: {
+        "click button.delete-item": "deleteItem"
+        //"click .add-favorite": "addFavorite",
+        //"click .remove-favorite": "removeFavorite"
+    },
 
-deleteItem: function(event){
-    event.preventDefault();
-    var $button = $(event.currentTarget);
-    var itemId = $button.data("id");
-    var item = this.collection.get(itemId);
-    item.destroy({
-        success: function() {
-            console.log("success!");
-        },
-        error: function() {
-            console.log(">_< >_<")
-        }
-    });
-},
+    deleteItem: function(event){
+        event.preventDefault();
+        var $button = $(event.currentTarget);
+        var itemId = $button.data("id");
+        var item = this.collection.get(itemId);
+        item.destroy({
+            success: function() {
+                console.log("success!");
+            },
+            error: function() {
+                console.log(">_< >_<")
+            }
+        });
+    },
 
 
     initialize: function () {
@@ -28,9 +28,25 @@ deleteItem: function(event){
         this.listenTo(this.collection, "sync", this.render);
         this.listenTo(this.collection, "remove", this.removeView);
 
+        this.listenTo(this.collection, "sync", (function () {
+            this.allItems = this.collection.models.concat([]);
+        }).bind(this))
+
+        this.listenTo(searchService, "search", this.filterCollection);
         this.collection.each(function(item){
             this.addView(item)
         }.bind(this))
+    },
+// search service, when string empty, trigger search with null
+// change filter collection, when receive null search items, put everything back in the set
+    filterCollection: function(searchResultItems) {
+        var filteredItems = _(this.allItems).filter(function (item) {
+            return _.chain(searchResultItems).pluck("id").contains(item.id).value();
+        });
+
+        console.log(filteredItems);
+        this.collection.set(filteredItems);
+        console.log(searchResultItems);    
     },
 
     addView: function(model){
@@ -39,15 +55,17 @@ deleteItem: function(event){
             model: model
         });
         this.addSubview("div.list-items", itemElementView);
+        this.masonry();
     },
 
     removeView: function(model){
-        var subview = _.find(this.subviews("ul.list-items"), function(subview){
+        var subview = _.find(this.subviews("div.list-items"), function(subview){
             if(subview.model.id === model.id){
                 return true;
             }
         })
         this.removeSubview("div.list-items", subview);
+        this.masonry();
     },
 
 
