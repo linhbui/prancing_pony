@@ -66,7 +66,7 @@ deleteItem: function(event){
                 self.fetching = true;
                 self.stopListening(self.collection, 'sync');
                 self.collection.fetch({
-                    data: { page: self.collection.page + 1 },
+                    data: { page: self.collection.page + 1, category: this.model },
                     remove: false,
                     wait: true,
                     success: function () {

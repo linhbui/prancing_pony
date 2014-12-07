@@ -22,7 +22,6 @@
 
 
 .left {
-    width: 530px;
     float: left;
     margin-top: 20px;
     margin-left: 10px;
@@ -39,7 +38,6 @@
 }
 
 .right {
-    width: 310px;
     float:right ;
     margin-top: 20px;
 }
@@ -145,16 +143,17 @@
 
 .item-seller-avatar {
     width: 23%;
+    height: 28%;
+    /*width: 80px;;*/
+    /*height: 80px;*/
     z-index: 3;
     position: absolute;
-    bottom: -20px;
+    bottom: -25px;
     right: 0px;
     border-style: solid;
     border-color: white;
     border-width: 2px;
 }
-
-
 
 .item-index-image {
     z-index: 1;

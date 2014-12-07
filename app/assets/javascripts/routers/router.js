@@ -37,7 +37,7 @@ PrancingPony.Routers.Router = Backbone.Router.extend({
         items.fetch({ data: { category: id } });
         var indexView = new PrancingPony.Views.CategoryAll({
             collection: items,
-            model: PrancingPony.category
+            category_id: id
         });
         this._swapView(indexView);
     },

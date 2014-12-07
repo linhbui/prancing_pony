@@ -9,7 +9,6 @@ class Api::ItemsController < ApplicationController
             @items = Item.includes(:reviews).all
         end
         @items = @items.page(params[:page]).per(3)
-        #@items = Kaminari.paginate_array(Item.all).page(params[:page])
         render :index
     end
 

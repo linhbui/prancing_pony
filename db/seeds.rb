@@ -402,21 +402,6 @@ CategoryItem.create!(
 )
 
 CategoryItem.create!(
-   category_id: elves.id,
-   item_id: ring.id
-)
-
-CategoryItem.create!(
-   category_id: services.id,
-   item_id: sword.id
-)
-
-CategoryItem.create!(
-   category_id: elves.id,
-   item_id: sword.id
-)
-
-CategoryItem.create!(
    category_id: magical_items.id,
    item_id: palantir.id
 )
@@ -432,8 +417,28 @@ CategoryItem.create!(
 )
 
 CategoryItem.create!(
-   category_id: elves.id,
-   item_id: rope.id
+   category_id: magical_items.id,
+   item_id: bread.id
+)
+
+CategoryItem.create!(
+   category_id: magical_items.id,
+   item_id: cloak.id
+)
+
+CategoryItem.create!(
+   category_id: magical_items.id,
+   item_id: hair.id
+)
+
+CategoryItem.create!(
+   category_id: magical_items.id,
+   item_id: light.id
+)
+
+CategoryItem.create!(
+   category_id: services.id,
+   item_id: sword.id
 )
 
 CategoryItem.create!(
@@ -447,43 +452,57 @@ CategoryItem.create!(
 )
 
 CategoryItem.create!(
+   category_id: services.id,
+   item_id: ringbearer.id
+)
+
+CategoryItem.create!(
+   category_id: services.id,
+   item_id: gardening.id
+)
+CategoryItem.create!(
+   category_id: elves.id,
+   item_id: sword.id
+)
+
+CategoryItem.create!(
+   category_id: elves.id,
+   item_id: ring.id
+)
+
+CategoryItem.create!(
+   category_id: elves.id,
+   item_id: hair.id
+)
+
+CategoryItem.create!(
+   category_id: elves.id,
+   item_id: rope.id
+)
+
+CategoryItem.create!(
+   category_id: elves.id,
+   item_id: bread.id
+)
+
+CategoryItem.create!(
+   category_id: elves.id,
+   item_id: cloak.id
+)
+
+CategoryItem.create!(
+   category_id: elves.id,
+   item_id: light.id
+)
+
+CategoryItem.create!(
    category_id: hobbits.id,
    item_id: bodyguard.id
 )
 
 CategoryItem.create!(
-   category_id: services.id,
-   item_id: ringbearer.id
-)
-
-CategoryItem.create!(
    category_id: hobbits.id,
    item_id: ringbearer.id
-)
-
-CategoryItem.create!(
-   category_id: magical_items.id,
-   item_id: bread.id
-)
-
-CategoryItem.create!(
-   category_id: elves.id,
-   item_id: bread.id
-)
-
-CategoryItem.create!(
-   category_id: magical_items.id,
-   item_id: hair.id
-)
-
-CategoryItem.create!(
-   category_id: elves.id,
-   item_id: hair.id
-)
-
-CategoryItem.create!(
-   category_id: others.id,
-   item_id: pipeweed.id
 )
 
 CategoryItem.create!(
@@ -492,32 +511,7 @@ CategoryItem.create!(
 )
 
 CategoryItem.create!(
-   category_id: magical_items.id,
-   item_id: cloak.id
-)
-
-CategoryItem.create!(
-   category_id: elves.id,
-   item_id: cloak.id
-)
-
-CategoryItem.create!(
-   category_id: magical_items.id,
-   item_id: light.id
-)
-
-CategoryItem.create!(
-   category_id: elves.id,
-   item_id: light.id
-)
-
-CategoryItem.create!(
    category_id: hobbits.id,
-   item_id: house.id
-)
-
-CategoryItem.create!(
-   category_id: others.id,
    item_id: house.id
 )
 
@@ -527,6 +521,11 @@ CategoryItem.create!(
 )
 
 CategoryItem.create!(
-   category_id: services.id,
-   item_id: gardening.id
+   category_id: others.id,
+   item_id: pipeweed.id
+)
+
+CategoryItem.create!(
+   category_id: others.id,
+   item_id: house.id
 )
